@@ -1,0 +1,20 @@
+PLL_Name	Antirreboteesquema:inst26|pll10k:inst6|altpll:altpll_component|pll10k_altpll:auto_generated|pll1
+PLLJITTER	50
+PLLSPEmax	84
+PLLSPEmin	-53
+
+PLL_Name	Antirreboteesquema:inst26|pll:inst3|altpll:altpll_component|pll_altpll:auto_generated|pll1
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+
+PLL_Name	esqumaticoADC:inst23|pll1:inst2|altpll:altpll_component|pll1_altpll:auto_generated|pll1
+PLLJITTER	35
+PLLSPEmax	84
+PLLSPEmin	-53
+
+PLL_Name	pll1:inst5|altpll:altpll_component|pll1_altpll:auto_generated|pll1
+PLLJITTER	51
+PLLSPEmax	84
+PLLSPEmin	-53
+

@@ -1,0 +1,55 @@
+
+State Machine - |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState
+Name currState.doneState currState.transState currState.waitState currState.resetState currState.pauseState 
+currState.resetState 0 0 0 0 0 
+currState.waitState 0 0 1 1 0 
+currState.transState 0 1 0 1 0 
+currState.doneState 1 0 0 1 0 
+currState.pauseState 0 0 0 1 1 
+
+State Machine - |fin|avanzar:inst10|state
+Name state.CI state.CD state.avanzar state.ocioso 
+state.ocioso 0 0 0 0 
+state.avanzar 0 0 1 1 
+state.CD 0 1 0 1 
+state.CI 1 0 0 1 
+
+State Machine - |fin|Antirreboteesquema:inst26|Antirrebote:inst|estado
+Name estado.FP estado.B estado.FN estado.A 
+estado.A 0 0 0 0 
+estado.FN 0 0 1 1 
+estado.B 0 1 0 1 
+estado.FP 1 0 0 1 
+
+State Machine - |fin|ubicacion:inst21|ubicacionparte2v2:inst2|fstate
+Name fstate.RESTAR4b fstate.SUMAR1b fstate.SUMAR4b fstate.RESTAR1b fstate.RESTAR4 fstate.SUMAR1 fstate.SUMAR4 fstate.RESTAR1 fstate.O4 fstate.O3 fstate.O2 fstate.O1 
+fstate.O1 0 0 0 0 0 0 0 0 0 0 0 0 
+fstate.O2 0 0 0 0 0 0 0 0 0 0 1 1 
+fstate.O3 0 0 0 0 0 0 0 0 0 1 0 1 
+fstate.O4 0 0 0 0 0 0 0 0 1 0 0 1 
+fstate.RESTAR1 0 0 0 0 0 0 0 1 0 0 0 1 
+fstate.SUMAR4 0 0 0 0 0 0 1 0 0 0 0 1 
+fstate.SUMAR1 0 0 0 0 0 1 0 0 0 0 0 1 
+fstate.RESTAR4 0 0 0 0 1 0 0 0 0 0 0 1 
+fstate.RESTAR1b 0 0 0 1 0 0 0 0 0 0 0 1 
+fstate.SUMAR4b 0 0 1 0 0 0 0 0 0 0 0 1 
+fstate.SUMAR1b 0 1 0 0 0 0 0 0 0 0 0 1 
+fstate.RESTAR4b 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |fin|ubicacion:inst21|orientacion:inst1|state
+Name state.Og state.Eg state.Sg state.Ng state.Od state.Ed state.Sd state.Nd 
+state.Nd 0 0 0 0 0 0 0 0 
+state.Sd 0 0 0 0 0 0 1 1 
+state.Ed 0 0 0 0 0 1 0 1 
+state.Od 0 0 0 0 1 0 0 1 
+state.Ng 0 0 0 1 0 0 0 1 
+state.Sg 0 0 1 0 0 0 0 1 
+state.Eg 0 1 0 0 0 0 0 1 
+state.Og 1 0 0 0 0 0 0 1 
+
+State Machine - |fin|doblar2:inst6|state
+Name state.reversa state.izq state.der state.parado 
+state.parado 0 0 0 0 
+state.der 0 0 1 1 
+state.izq 0 1 0 1 
+state.reversa 1 0 0 1 

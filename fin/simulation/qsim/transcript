@@ -1,0 +1,25 @@
+# do fin.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fin
+# 
+# Top level modules:
+# 	fin
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fin_vlg_sample_tst
+# -- Compiling module fin_vlg_check_tst
+# ** Error: fin.vt(66): near "01": syntax error, unexpected INTEGER NUMBER, expecting ')'
+# ** Error: fin.vt(102): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(136): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(202): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(202): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(262): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(363): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(377): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(377): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(378): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(383): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(387): near "01e": Digits must follow 'E' character in real.
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+# Executing ONERROR command at macro ./fin.do line 4

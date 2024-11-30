@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="fin">
+		<CBX_INST_ENTRY INSTANCE_NAME="|fin|comparador_1:inst18|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_1hj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fin|comparador_2:inst|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_1hj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fin|Antirreboteesquema:inst26|comparador:inst2|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_sgj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fin|Antirreboteesquema:inst26|pll10k:inst6|altpll:altpll_component" CBX_FILE_NAME="pll10k_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fin|esqumaticoADC:inst23|comparador_adc:inst1|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_tgj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fin|pll1:inst5|altpll:altpll_component" CBX_FILE_NAME="pll1_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fin|Antirreboteesquema:inst26|lpm_counter0:inst1|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_mti.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fin|Antirreboteesquema:inst26|pll:inst3|altpll:altpll_component" CBX_FILE_NAME="pll_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fin|esqumaticoADC:inst23|comparador_adc:inst4|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_tgj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fin|esqumaticoADC:inst23|pll1:inst2|altpll:altpll_component" CBX_FILE_NAME="pll1_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fin|lpm_counter0:inst9|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_mti.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
