@@ -1,0 +1,39 @@
+# do autito.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module doblar2
+# 
+# Top level modules:
+# 	doblar2
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module doblar2_vlg_sample_tst
+# -- Compiling module doblar2_vlg_check_tst
+# -- Compiling module doblar2_vlg_vec_tst
+# 
+# Top level modules:
+# 	doblar2_vlg_vec_tst
+# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.doblar2_vlg_vec_tst 
+# Loading work.doblar2_vlg_vec_tst
+# Loading work.doblar2
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_pll
+# Loading cycloneive_ver.cycloneive_m_cntr
+# Loading cycloneive_ver.cycloneive_n_cntr
+# Loading cycloneive_ver.cycloneive_scale_cntr
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading work.doblar2_vlg_sample_tst
+# Loading work.doblar2_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+#  Note : Cycloneive PLL was reset
+# Time: 0.000 ps  Instance: doblar2_vlg_vec_tst.i1.\pll50k|altpll_component|auto_generated|pll1 
+#  Note : Cycloneive PLL locked to incoming clock
+# Time: 110000.000 ps  Instance: doblar2_vlg_vec_tst.i1.\pll50k|altpll_component|auto_generated|pll1 
+# Simulation passed !
+# ** Note: $finish    : autito.vt(534)
+#    Time: 1 us  Iteration: 0  Instance: /doblar2_vlg_vec_tst/tb_out
