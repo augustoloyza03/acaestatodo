@@ -1,0 +1,13 @@
+|giro
+clk => state~1.DATAIN
+GI => Equal0.IN1
+GI => Equal1.IN0
+GI => Equal2.IN0
+GD => Equal0.IN0
+GD => Equal1.IN1
+GD => Equal2.IN1
+reset => state~3.DATAIN
+NGI <= NGI.DB_MAX_OUTPUT_PORT_TYPE
+NGD <= NGD.DB_MAX_OUTPUT_PORT_TYPE
+
+

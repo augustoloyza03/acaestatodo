@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity decision is
+
+port ( reset : in std_logic
+       clk : in std_logic;
+		 V1,V2,V3,V4 :in std_logic_vector (3 downto 0); 
+		 O1,O0 :in std_logic
+		 GI,GD,ea,eg:out std_logic
+		 
+		 );
+end entity;		 
+
+
+architecture rtl of decision is
+
+	signal v1 : unsigned range 0 to 15;
+
+begin
+v1<= unsigned(V1);
+
+ process (reset,clk,O1,O0,V1,V2,V3,V4)
+  begin
+  O<= O1 & O0;
+  if reset= '0' then
+   GI<='0'; GD<='0' ;ea<='0';eg<='0' ;
+	elsif (rising_edge(clk)) then
+	
+   case O is
+    when '00'=> 
+	   if V1< V2
+	 
+  
+

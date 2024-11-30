@@ -1,0 +1,734 @@
+$comment
+	File created using the following command:
+		vcd file autitov2.msim.vcd -direction
+$end
+$date
+	Tue Nov 05 02:28:31 2024
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module avanzar_vlg_vec_tst $end
+$var reg 1 ! clock $end
+$var reg 1 " reset $end
+$var reg 12 # SENSOR_D [11:0] $end
+$var reg 12 $ SENSOR_I [11:0] $end
+$var wire 1 % SALIDA_D [2] $end
+$var wire 1 & SALIDA_D [1] $end
+$var wire 1 ' SALIDA_D [0] $end
+$var wire 1 ( SALIDA_I [2] $end
+$var wire 1 ) SALIDA_I [1] $end
+$var wire 1 * SALIDA_I [0] $end
+$var wire 1 + sampler $end
+$scope module i1 $end
+$var wire 1 , gnd $end
+$var wire 1 - vcc $end
+$var wire 1 . unknown $end
+$var tri1 1 / devclrn $end
+$var tri1 1 0 devpor $end
+$var tri1 1 1 devoe $end
+$var wire 1 2 LessThan2~0_combout $end
+$var wire 1 3 LessThan3~0_combout $end
+$var wire 1 4 LessThan3~2_combout $end
+$var wire 1 5 LessThan3~3_combout $end
+$var wire 1 6 Selector0~4_combout $end
+$var wire 1 7 SENSOR_I[1]~input_o $end
+$var wire 1 8 SENSOR_I[5]~input_o $end
+$var wire 1 9 SENSOR_I[6]~input_o $end
+$var wire 1 : SENSOR_I[7]~input_o $end
+$var wire 1 ; SENSOR_I[9]~input_o $end
+$var wire 1 < SENSOR_D[4]~input_o $end
+$var wire 1 = SENSOR_D[5]~input_o $end
+$var wire 1 > SENSOR_D[6]~input_o $end
+$var wire 1 ? SENSOR_D[7]~input_o $end
+$var wire 1 @ SENSOR_D[11]~input_o $end
+$var wire 1 A SENSOR_D[0]~input_o $end
+$var wire 1 B SALIDA_I[0]~output_o $end
+$var wire 1 C SALIDA_I[1]~output_o $end
+$var wire 1 D SALIDA_I[2]~output_o $end
+$var wire 1 E SALIDA_D[0]~output_o $end
+$var wire 1 F SALIDA_D[1]~output_o $end
+$var wire 1 G SALIDA_D[2]~output_o $end
+$var wire 1 H clock~input_o $end
+$var wire 1 I clock~inputclkctrl_outclk $end
+$var wire 1 J SENSOR_I[11]~input_o $end
+$var wire 1 K SENSOR_I[10]~input_o $end
+$var wire 1 L SENSOR_I[8]~input_o $end
+$var wire 1 M LessThan2~1_combout $end
+$var wire 1 N SENSOR_I[4]~input_o $end
+$var wire 1 O SENSOR_I[2]~input_o $end
+$var wire 1 P SENSOR_I[3]~input_o $end
+$var wire 1 Q Selector0~0_combout $end
+$var wire 1 R SENSOR_I[0]~input_o $end
+$var wire 1 S LessThan2~2_combout $end
+$var wire 1 T LessThan2~3_combout $end
+$var wire 1 U Selector2~0_combout $end
+$var wire 1 V reset~input_o $end
+$var wire 1 W reset~inputclkctrl_outclk $end
+$var wire 1 X state.CORRECION_I~q $end
+$var wire 1 Y Selector0~1_combout $end
+$var wire 1 Z SENSOR_D[8]~input_o $end
+$var wire 1 [ SENSOR_D[9]~input_o $end
+$var wire 1 \ SENSOR_D[10]~input_o $end
+$var wire 1 ] LessThan3~1_combout $end
+$var wire 1 ^ SENSOR_D[2]~input_o $end
+$var wire 1 _ SENSOR_D[3]~input_o $end
+$var wire 1 ` SENSOR_D[1]~input_o $end
+$var wire 1 a Selector0~2_combout $end
+$var wire 1 b Selector1~0_combout $end
+$var wire 1 c state.CORRECCION_D~q $end
+$var wire 1 d Selector0~3_combout $end
+$var wire 1 e Selector0~5_combout $end
+$var wire 1 f state.Avanzar~q $end
+$var wire 1 g SALIDA_I~0_combout $end
+$var wire 1 h SALIDA_I[0]~reg0_q $end
+$var wire 1 i SALIDA_D~0_combout $end
+$var wire 1 j SALIDA_D[0]~reg0_q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+b111111111111 #
+b111111111111 $
+0'
+0&
+1%
+0*
+0)
+1(
+x+
+0,
+1-
+x.
+1/
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+1:
+1;
+1<
+1=
+1>
+1?
+1@
+1A
+0B
+0C
+1D
+0E
+0F
+1G
+0H
+0I
+1J
+1K
+1L
+0M
+1N
+1O
+1P
+1Q
+1R
+1S
+1T
+0U
+1V
+1W
+0X
+1Y
+1Z
+1[
+1\
+0]
+1^
+1_
+1`
+1a
+0b
+0c
+1d
+1e
+0f
+0g
+0h
+0i
+0j
+$end
+#10000
+1!
+1H
+1I
+0+
+1f
+1i
+1g
+#20000
+0"
+0!
+0V
+0H
+0W
+0I
+1+
+0f
+0i
+0g
+#30000
+1!
+1H
+1I
+0+
+#40000
+0!
+0H
+0I
+1+
+#50000
+1!
+1H
+1I
+0+
+#60000
+0!
+0H
+0I
+1+
+#70000
+1!
+1H
+1I
+0+
+#80000
+0!
+0H
+0I
+1+
+#90000
+1!
+1H
+1I
+0+
+#100000
+0!
+0H
+0I
+1+
+#110000
+1!
+1H
+1I
+0+
+#120000
+0!
+0H
+0I
+1+
+#130000
+1!
+1H
+1I
+0+
+#140000
+0!
+0H
+0I
+1+
+#150000
+1!
+1H
+1I
+0+
+#160000
+0!
+0H
+0I
+1+
+#170000
+1!
+1H
+1I
+0+
+#180000
+0!
+0H
+0I
+1+
+#190000
+1!
+1H
+1I
+0+
+#200000
+0!
+0H
+0I
+1+
+#210000
+1!
+1H
+1I
+0+
+#220000
+0!
+0H
+0I
+1+
+#230000
+1!
+1H
+1I
+0+
+#240000
+0!
+0H
+0I
+1+
+#250000
+1!
+1H
+1I
+0+
+#260000
+0!
+0H
+0I
+1+
+#270000
+1!
+1H
+1I
+0+
+#280000
+0!
+0H
+0I
+1+
+#290000
+1!
+1H
+1I
+0+
+#300000
+0!
+0H
+0I
+1+
+#310000
+b11111111111 $
+b1111111111 $
+b111111111 $
+b11111111 $
+b1111111 $
+b111111 $
+b11111 $
+b1111 $
+b111 $
+b11 $
+b1 $
+b0 $
+1!
+0R
+07
+0O
+0P
+0N
+08
+09
+0:
+0L
+0;
+0K
+0J
+1H
+1I
+0+
+0S
+0Q
+02
+1M
+0T
+06
+#320000
+0!
+0H
+0I
+1+
+#330000
+1!
+1H
+1I
+0+
+#340000
+0!
+0H
+0I
+1+
+#350000
+1!
+1H
+1I
+0+
+#360000
+0!
+0H
+0I
+1+
+#370000
+1!
+1H
+1I
+0+
+#380000
+0!
+0H
+0I
+1+
+#390000
+1!
+1H
+1I
+0+
+#400000
+0!
+0H
+0I
+1+
+#410000
+1!
+1H
+1I
+0+
+#420000
+0!
+0H
+0I
+1+
+#430000
+1!
+1H
+1I
+0+
+#440000
+0!
+0H
+0I
+1+
+#450000
+1!
+1H
+1I
+0+
+#460000
+0!
+0H
+0I
+1+
+#470000
+1!
+1H
+1I
+0+
+#480000
+0!
+0H
+0I
+1+
+#490000
+1!
+1H
+1I
+0+
+#500000
+0!
+0H
+0I
+1+
+#510000
+1!
+1H
+1I
+0+
+#520000
+0!
+0H
+0I
+1+
+#530000
+1!
+1H
+1I
+0+
+#540000
+0!
+0H
+0I
+1+
+#550000
+b100000000000 $
+b110000000000 $
+b111000000000 $
+b111100000000 $
+b111110000000 $
+b111111000000 $
+b111111100000 $
+b111111110000 $
+b111111111000 $
+b111111111100 $
+b111111111110 $
+b111111111111 $
+1!
+1R
+17
+1O
+1P
+1N
+18
+19
+1:
+1L
+1;
+1K
+1J
+1H
+1I
+0+
+1S
+1Q
+12
+0M
+1T
+16
+#560000
+0!
+0H
+0I
+1+
+#570000
+1!
+1H
+1I
+0+
+#580000
+0!
+0H
+0I
+1+
+#590000
+1!
+1H
+1I
+0+
+#600000
+0!
+0H
+0I
+1+
+#610000
+1!
+1H
+1I
+0+
+#620000
+0!
+0H
+0I
+1+
+#630000
+1!
+1H
+1I
+0+
+#640000
+0!
+0H
+0I
+1+
+#650000
+1!
+1H
+1I
+0+
+#660000
+0!
+0H
+0I
+1+
+#670000
+1!
+1H
+1I
+0+
+#680000
+0!
+0H
+0I
+1+
+#690000
+1!
+1H
+1I
+0+
+#700000
+0!
+0H
+0I
+1+
+#710000
+1!
+1H
+1I
+0+
+#720000
+0!
+0H
+0I
+1+
+#730000
+1!
+1H
+1I
+0+
+#740000
+0!
+0H
+0I
+1+
+#750000
+1!
+1H
+1I
+0+
+#760000
+0!
+0H
+0I
+1+
+#770000
+1!
+1H
+1I
+0+
+#780000
+0!
+0H
+0I
+1+
+#790000
+1!
+1H
+1I
+0+
+#800000
+0!
+0H
+0I
+1+
+#810000
+1!
+1H
+1I
+0+
+#820000
+0!
+0H
+0I
+1+
+#830000
+1!
+1H
+1I
+0+
+#840000
+0!
+0H
+0I
+1+
+#850000
+1!
+1H
+1I
+0+
+#860000
+0!
+0H
+0I
+1+
+#870000
+1!
+1H
+1I
+0+
+#880000
+0!
+0H
+0I
+1+
+#890000
+1!
+1H
+1I
+0+
+#900000
+0!
+0H
+0I
+1+
+#910000
+1!
+1H
+1I
+0+
+#920000
+0!
+0H
+0I
+1+
+#930000
+1!
+1H
+1I
+0+
+#940000
+0!
+0H
+0I
+1+
+#950000
+1!
+1H
+1I
+0+
+#960000
+0!
+0H
+0I
+1+
+#970000
+1!
+1H
+1I
+0+
+#980000
+0!
+0H
+0I
+1+
+#990000
+1!
+1H
+1I
+0+
+#1000000

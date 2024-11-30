@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Yo\Desktop\Avanzar_derecho\simulation\qsim
+vavanzar
+Z1 IRBd^A4[Ad91kMWo_PGjWX3
+Z2 VUe@=h[kgSMZFoiTXeE=T23
+Z3 dC:\Users\Yo\Desktop\Avanzar_derecho\simulation\qsim
+Z4 w1730784509
+Z5 8autitov2.vo
+Z6 Fautitov2.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 GMHimOUDlMg>jNN1>3E2C0
+!s85 0
+Z10 !s108 1730784511.066000
+Z11 !s107 autitov2.vo|
+Z12 !s90 -work|work|autitov2.vo|
+!s101 -O0
+vavanzar_vlg_check_tst
+!i10b 1
+!s100 URLHOLH^9m9D<H@b7]^6O0
+IRzZHN6dhOQKZTj=O8_c<T3
+V6Om@G[^A;L3g6k;RSXO=L2
+R3
+Z13 w1730784508
+Z14 8autitov2.vt
+Z15 Fautitov2.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z16 !s108 1730784511.175000
+Z17 !s107 autitov2.vt|
+Z18 !s90 -work|work|autitov2.vt|
+!s101 -O0
+R8
+vavanzar_vlg_sample_tst
+!i10b 1
+!s100 cfeo1FIe`Md<?OYI0L;[:2
+IXKH1GzlR?UMIiEU7LK@D_1
+VKmZ?:T0c8hHW;RY4N0<bb3
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vavanzar_vlg_vec_tst
+!i10b 1
+!s100 h<b`A`mgFF4cd3J1b2`Sb3
+IF1:YiW^h`nKAjc46631R[2
+VKQfkXh1Fm`?d0mDN4a;ca0
+R3
+R13
+R14
+R15
+L0 255
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

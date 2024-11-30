@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\Users\Administrador\Documents\GitHub\tomadecision2\simulation\qsim
+vdecision
+Z1 !s100 <hXbJmdk28B2?TGF^4EV21
+Z2 INXbG<nTacZ5=[:VZH@gmB3
+Z3 Vz1dH>h>i?W=SC8>>gmXP?1
+Z4 dF:\Users\Administrador\Documents\GitHub\tomadecision2\simulation\qsim
+Z5 w1732721918
+Z6 8decision.vo
+Z7 Fdecision.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|decision.vo|
+Z10 o-work work -O0
+Z11 !s108 1732721919.640000
+Z12 !s107 decision.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vdecision_vlg_check_tst
+Z13 !s100 Ae;R;b2@>2EJheF<fRf6:0
+Z14 IK]4fJ5J<8eagMI:OS]:^m1
+Z15 V4Uj=af;>Nmac4Yb31XBVO2
+R4
+Z16 w1732721916
+Z17 8decision.vt
+Z18 Fdecision.vt
+L0 71
+R8
+r1
+31
+Z19 !s108 1732721919.942000
+Z20 !s107 decision.vt|
+Z21 !s90 -work|work|decision.vt|
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vdecision_vlg_sample_tst
+Z22 !s100 G;PKDVFnW<O<cP5SlTN722
+Z23 IhGB`5LBmeHHcG@VQ`n8Z_3
+Z24 V<N6[C;[4A]id37OV[C:0Y3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+31
+R19
+R20
+R21
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vdecision_vlg_vec_tst
+Z25 IVDZfHVaiXO[<F1[MJEHN?2
+Z26 V?92fkk8@0>Sk7:=DARH1z0
+R4
+R16
+R17
+R18
+Z27 L0 247
+R8
+r1
+31
+R19
+R20
+R21
+R10
+Z28 !s100 3H_LBcmigj7laOVgNlee]0
+!i10b 1
+!s85 0
+!s101 -O0
+vdecisionfinal
+Z29 !s100 0Z:Th:Ta@EZ:;Y@aYGb8A0
+Z30 I[m0Cak@dQBmP7TViFOg482
+Z31 V@LBKOFeGQ6gzRk>3N[LnE1
+R4
+Z32 w1732904216
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+!i10b 1
+!s85 0
+Z33 !s108 1732904218.156000
+R12
+!s101 -O0
+vdecisionfinal_vlg_check_tst
+!i10b 1
+Z34 !s100 NJe7im9=HEojV[?5ZYA:I2
+Z35 ISUC8jj_33Q;b_4Z3TefW[3
+Z36 VTP?2nT2LPK3838m69gAAO1
+R4
+Z37 w1732904214
+R17
+R18
+L0 71
+R8
+r1
+!s85 0
+31
+Z38 !s108 1732904218.521000
+Z39 !s107 decision.vt|
+R21
+!s101 -O0
+R10
+vdecisionfinal_vlg_sample_tst
+!i10b 1
+Z40 !s100 k6dTJa8acL3;d]Okl5eAM1
+Z41 ICh4SDd=fzPTSNHHOi=GJG1
+Z42 V7ER5L^PKNEUZd4L:a0FMo0
+R4
+R37
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R38
+R39
+R21
+!s101 -O0
+R10
+vdecisionfinal_vlg_vec_tst
+!i10b 1
+!s100 [0S7Hc7:1Z?YLFM32g<[V0
+I<L>@_fkNV=dA:74e?n`^:1
+Z43 V>JkiG>deABEQ7BJ9T<d7g2
+R4
+R37
+R17
+R18
+R27
+R8
+r1
+!s85 0
+31
+R38
+R39
+R21
+!s101 -O0
+R10

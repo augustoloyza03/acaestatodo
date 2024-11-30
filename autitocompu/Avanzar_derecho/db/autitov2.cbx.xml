@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="autitov2">
+		<CBX_INST_ENTRY INSTANCE_NAME="|adc_avanzar|esqumaticoADC:inst|pll1:b2v_inst2|altpll:altpll_component" CBX_FILE_NAME="pll1_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

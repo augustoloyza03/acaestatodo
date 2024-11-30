@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : 15.284
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'inst|inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 995.282
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst|inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 9.683
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst|inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 499.753
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : 15.675
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'inst|inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 995.721
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst|inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.701
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst|inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 499.745
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : 17.256
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst|inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 997.364
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst|inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.445
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst|inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 499.782
+TNS   : 0.000
+
+------------------------------------------------------------
