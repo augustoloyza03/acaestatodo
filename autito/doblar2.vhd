@@ -9,14 +9,14 @@ entity doblar2 is
 		clk,reset,tc1,tc2	: in	std_logic;
 	   indicacion1,indicacion0 : in	std_logic;
 		M1I,M0I,M1D,M0D:buffer std_LOGIC;
-		velmi,velmd,clc: out	std_logic
+		velmi,velmd,clc,aviso: out	std_logic
 	);
 
 end entity;
 
 architecture rtl of doblar2 is
 	-- Build an enumerated type for the state machine
-	type state_type is (parado,der,izq,reversa);
+	type state_type is (parado,der,izq,reversa,der2,izq2,reversa2,der3,izq3,reversa3);
 
 	-- Register to hold the current state
 	signal state   : state_type;
@@ -47,20 +47,32 @@ begin
 					if tc1='1' then
 						state <= der;
 					else
-						state <= parado ;---------------------------------------antes era parado
+						state <= der2 ;---------------------------------------antes era parado
 					end if; 
 				when izq=>
 					if tc1='1' then
 						state <= izq;
 					else
-						state <=parado ;-------------------------------------antes era parado
+						state <=izq2 ;-------------------------------------antes era parado
 					end if;
 				when reversa =>
 					if tc2='1' then
 						state <= reversa;
 					else
-						state <= parado ;---------antes era parado
+						state <= reversa2 ;---------antes era parado
 					end if;
+					when der2=>
+					state <= der3;
+					when izq2=>
+					state <= izq3;
+					when reversa2=>
+					state <= reversa3;
+				   when der3=>
+					state <= parado;
+					when izq3=>
+					state <= parado;
+					when reversa3=>
+					state <= parado;
 				--when fin =>
 				  --state<= fin;
 --					if indicacion= "01" then
@@ -78,19 +90,45 @@ begin
 		case state is
 			when parado =>
 				M1I<= '0';M0I<= '0';M1D<= '0';M0D<= '0';
-				clc<= '1'; velmd<='0';velmi<='0';
+				clc<= '1'; velmd<='0';velmi<='0';aviso<='0';
 				
 			when izq =>
 				M1I<= '0';M0I<= '1';M1D<= '1';M0D<= '0';   
-				clc<= '0'; velmd<='1';velmi<='1';
+				clc<= '0'; velmd<='1';velmi<='1';aviso<='0';
 			when der =>
 				M1I<= '1';M0I<= '0';M1D<= '0';M0D<= '1';
-				clc<= '0'; velmd<='1';velmi<='1';	
+				clc<= '0'; velmd<='1';velmi<='1';aviso<='0';	
 				
 			when reversa =>
-				M1I<= '1';M0I<= '0';M1D<= '0';M0D<= '1';
-				clc<= '0';velmd<='1';velmi<='1';	
+				M1I<= '0';M0I<= '1';M1D<= '1';M0D<= '0';
+				clc<= '0';velmd<='1';velmi<='1';aviso<='0';	
 				
+			when izq2 =>
+				M1I<= '0';M0I<= '0';M1D<= '0';M0D<= '0';
+				clc<= '1'; velmd<='0';velmi<='0';aviso<='1';
+			when der2 =>
+				M1I<= '0';M0I<= '0';M1D<= '0';M0D<= '0';
+				clc<= '1'; velmd<='0';velmi<='0';aviso<='1';	
+				
+			when reversa2 =>
+				M1I<= '0';M0I<= '0';M1D<= '0';M0D<= '0';
+				clc<= '1'; velmd<='0';velmi<='0';aviso<='1';
+			when izq3 =>
+				M1I<= '0';M0I<= '0';M1D<= '0';M0D<= '0';
+				clc<= '1'; velmd<='0';velmi<='0';aviso<='1';	
+			when der3 =>
+				M1I<= '0';M0I<= '0';M1D<= '0';M0D<= '0';
+				clc<= '1'; velmd<='0';velmi<='0';aviso<='1';	
+				
+			when reversa3 =>
+				M1I<= '0';M0I<= '0';M1D<= '0';M0D<= '0';
+				clc<= '1'; velmd<='0';velmi<='0';aviso<='1';	
+					
+				
+			
+			
+			
+			
 			--when fin =>
 				--M1I<= '0';M0I<= '0';M1D<= '0';M0D<= '0';
 				--clc<= '1';	

@@ -26,7 +26,7 @@ begin
 	
 process(inicio,clock,entrada_aux,estado)
 begin
-	if inicio='0' then --inicio es una senial de reset
+	if inicio='1' then --inicio es una senial de reset
 		estado<=A;
 	elsif rising_edge(clock) then --ck es el clock de la maquina de estados
 		case estado is
@@ -78,11 +78,11 @@ case estado is
 					E<='0';
 					C<='0';
 				when "10" =>
-					Z<='0';
+					Z<='1';
 					E<='1';
 					C<='0';
 				when "11" =>
-					Z<='1';
+					Z<='0';
 					E<='0';
 					C<='0';
 			end case;
@@ -91,19 +91,19 @@ case estado is
 		ledchek1<='0';
 			case entrada_aux is
 				when "10" =>
-					Z<='0';
+					Z<='1';
 					E<='0';
 					C<='0';
 				when "01" =>
-					Z<='0';
+					Z<='1';
 					E<='0';
 					C<='0';
 				when "00" =>
-					Z<='0';
+					Z<='1';
 					E<='1';
 					C<='0';
 				when "11" =>
-					Z<='0';
+					Z<='1';
 					E<='0';
 					C<='0';
 			end case;
@@ -133,19 +133,19 @@ case estado is
 		ledchek1<='1';
 			case entrada_aux is
 				when "10" =>
-					Z<='0';
+					Z<='1';
 					E<='1';
 					C<='0';
 				when "11" =>
-					Z<='0';
+					Z<='1';
 					E<='1';
 					C<='0';
 				when "00" =>
-					Z<='0';
+					Z<='1';
 					E<='0';
 					C<='1';
 				when "01" =>
-					Z<='0';
+					Z<='1';
 					E<='0';
 					C<='1';
 		end case;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for orientacion
-Fri Nov 29 19:08:00 2024
+Sat Nov 30 15:32:22 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,10 +15,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |ubicacion|ubicacionparte2v2:inst2|fstate
   9. State Machine - |ubicacion|orientacion:inst1|state
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 10. User-Specified and Inferred Latches
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -44,15 +46,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 29 19:08:00 2024           ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 30 15:32:22 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; orientacion                                     ;
 ; Top-level Entity Name              ; ubicacion                                       ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 59                                              ;
-;     Total combinational functions  ; 55                                              ;
-;     Dedicated logic registers      ; 28                                              ;
-; Total registers                    ; 28                                              ;
+; Total logic elements               ; 65                                              ;
+;     Total combinational functions  ; 61                                              ;
+;     Dedicated logic registers      ; 30                                              ;
+; Total registers                    ; 30                                              ;
 ; Total pins                         ; 14                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -159,16 +161,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
-; SumaoResta.vhd                   ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/orientacion2/SumaoResta.vhd        ;         ;
-; ubicacionparte2v2.vhd            ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/orientacion2/ubicacionparte2v2.vhd ;         ;
-; ubicacion.bdf                    ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/orientacion2/ubicacion.bdf         ;         ;
-; orientacion.vhd                  ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/orientacion2/orientacion.vhd       ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
+; SumaoResta.vhd                   ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/orientacion2/SumaoResta.vhd        ;         ;
+; ubicacionparte2v2.vhd            ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/orientacion2/ubicacionparte2v2.vhd ;         ;
+; ubicacion.bdf                    ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/acaestatodo/orientacion2/ubicacion.bdf         ;         ;
+; orientacion.vhd                  ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/orientacion2/orientacion.vhd       ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -176,28 +178,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 59          ;
+; Estimated Total logic elements              ; 65          ;
 ;                                             ;             ;
-; Total combinational functions               ; 55          ;
+; Total combinational functions               ; 61          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 32          ;
-;     -- 3 input functions                    ; 19          ;
+;     -- 4 input functions                    ; 41          ;
+;     -- 3 input functions                    ; 16          ;
 ;     -- <=2 input functions                  ; 4           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 51          ;
+;     -- normal mode                          ; 57          ;
 ;     -- arithmetic mode                      ; 4           ;
 ;                                             ;             ;
-; Total registers                             ; 28          ;
-;     -- Dedicated logic registers            ; 28          ;
+; Total registers                             ; 30          ;
+;     -- Dedicated logic registers            ; 30          ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 14          ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 32          ;
-; Total fan-out                               ; 295         ;
-; Average fan-out                             ; 2.66        ;
+; Maximum fan-out                             ; 34          ;
+; Total fan-out                               ; 328         ;
+; Average fan-out                             ; 2.76        ;
 +---------------------------------------------+-------------+
 
 
@@ -206,9 +208,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
 ; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Library Name ;
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
-; |ubicacion                   ; 55 (0)            ; 28 (0)       ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |ubicacion                         ; work         ;
+; |ubicacion                   ; 61 (0)            ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |ubicacion                         ; work         ;
 ;    |SumaoResta:inst|         ; 7 (7)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ubicacion|SumaoResta:inst         ; work         ;
-;    |orientacion:inst1|       ; 22 (22)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ubicacion|orientacion:inst1       ; work         ;
+;    |orientacion:inst1|       ; 28 (28)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ubicacion|orientacion:inst1       ; work         ;
 ;    |ubicacionparte2v2:inst2| ; 26 (26)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ubicacion|ubicacionparte2v2:inst2 ; work         ;
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -252,19 +254,41 @@ Encoding Type:  One-Hot
 +----------+----------+----------+----------+----------+----------+----------+----------+----------+
 
 
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; orientacion:inst1|g[1]                             ; VCC                 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 28    ;
+; Total registers                              ; 30    ;
 ; Number of registers using Synchronous Clear  ; 9     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Clear ; 18    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; orientacion:inst1|o0_reg               ; 2       ;
+; orientacion:inst1|o1_reg               ; 2       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -281,7 +305,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -291,7 +315,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 29 19:07:55 2024
+    Info: Processing started: Sat Nov 30 15:32:18 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off orientacion -c orientacion
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file sumaoresta.vhd
@@ -307,21 +331,45 @@ Info (12021): Found 2 design units, including 1 entities, in source file orienta
     Info (12023): Found entity 1: orientacion
 Info (12127): Elaborating entity "ubicacion" for the top level hierarchy
 Info (12128): Elaborating entity "orientacion" for hierarchy "orientacion:inst1"
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(40): signal "gd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(40): signal "gi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(41): signal "gi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(41): signal "gd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(41): signal "tc2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(42): signal "gd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(42): signal "gi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(43): signal "gi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(43): signal "gd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(43): signal "tc1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at orientacion.vhd(38): inferring latch(es) for signal or variable "g", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "g[0]" at orientacion.vhd(38)
+Info (10041): Inferred latch for "g[1]" at orientacion.vhd(38)
+Info (10041): Inferred latch for "g[2]" at orientacion.vhd(38)
+Info (10041): Inferred latch for "g[3]" at orientacion.vhd(38)
 Info (12128): Elaborating entity "SumaoResta" for hierarchy "SumaoResta:inst"
 Info (12128): Elaborating entity "ubicacionparte2v2" for hierarchy "ubicacionparte2v2:inst2"
+Warning (14026): LATCH primitive "orientacion:inst1|g[3]" is permanently enabled
+Warning (14026): LATCH primitive "orientacion:inst1|g[0]" is permanently enabled
+Warning (14026): LATCH primitive "orientacion:inst1|g[2]" is permanently enabled
+Warning (14026): LATCH primitive "orientacion:inst1|g[3]" is permanently enabled
+Warning (14026): LATCH primitive "orientacion:inst1|g[2]" is permanently enabled
+Warning (14026): LATCH primitive "orientacion:inst1|g[0]" is permanently enabled
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register orientacion:inst1|o0_reg will power up to High
+    Critical Warning (18010): Register orientacion:inst1|o1_reg will power up to High
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "tc1"
-Info (21057): Implemented 73 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 79 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 59 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4619 megabytes
-    Info: Processing ended: Fri Nov 29 19:08:00 2024
-    Info: Elapsed time: 00:00:05
+    Info (21061): Implemented 65 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4623 megabytes
+    Info: Processing ended: Sat Nov 30 15:32:22 2024
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

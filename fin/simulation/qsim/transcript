@@ -12,14 +12,14 @@
 # ** Error: fin.vt(66): near "01": syntax error, unexpected INTEGER NUMBER, expecting ')'
 # ** Error: fin.vt(102): near "01e": Digits must follow 'E' character in real.
 # ** Error: fin.vt(136): near "01e": Digits must follow 'E' character in real.
-# ** Error: fin.vt(202): near "01e": Digits must follow 'E' character in real.
-# ** Error: fin.vt(202): near "01e": Digits must follow 'E' character in real.
-# ** Error: fin.vt(262): near "01e": Digits must follow 'E' character in real.
-# ** Error: fin.vt(363): near "01e": Digits must follow 'E' character in real.
-# ** Error: fin.vt(377): near "01e": Digits must follow 'E' character in real.
-# ** Error: fin.vt(377): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(200): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(200): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(259): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(354): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(368): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(368): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(369): near "01e": Digits must follow 'E' character in real.
+# ** Error: fin.vt(374): near "01e": Digits must follow 'E' character in real.
 # ** Error: fin.vt(378): near "01e": Digits must follow 'E' character in real.
-# ** Error: fin.vt(383): near "01e": Digits must follow 'E' character in real.
-# ** Error: fin.vt(387): near "01e": Digits must follow 'E' character in real.
 # ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
 # Executing ONERROR command at macro ./fin.do line 4

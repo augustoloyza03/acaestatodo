@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("F:/Users/Administrador/Documents/GitHub/partekeko/output_files/") File("PARTEKEKO.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("F:/Users/Administrador/Documents/GitHub/acaestatodo/partekeko/output_files/") File("PARTEKEKO.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

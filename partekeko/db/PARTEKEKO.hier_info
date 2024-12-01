@@ -1,10 +1,10 @@
 |Antirreboteesquema
 ledchek0 <= Antirrebote:inst.ledchek0
 inicio => inst4.IN0
-clkpll => pll10k:inst6.inclk0
+clock => pll10k:inst6.inclk0
+clock => pll:inst3.inclk0
 sensor => Antirrebote:inst.sensor
 sensor => LEDSENSOR.DATAIN
-clock => pll:inst3.inclk0
 ledchek1 <= Antirrebote:inst.ledchek1
 Z <= Antirrebote:inst.Z
 LEDSENSOR <= sensor.DB_MAX_OUTPUT_PORT_TYPE
@@ -20,10 +20,10 @@ sensor => Selector2.IN5
 sensor => Mux1.IN4
 sensor => Mux2.IN4
 sensor => Mux3.IN4
-sensor => Selector4.IN7
-sensor => Selector5.IN5
-sensor => Selector4.IN2
-sensor => Selector5.IN1
+sensor => Selector5.IN7
+sensor => Selector6.IN5
+sensor => Selector5.IN2
+sensor => Selector6.IN1
 sensor => Selector1.IN2
 sensor => Selector3.IN2
 sensor => Selector3.IN3
@@ -33,9 +33,9 @@ F => Mux2.IN5
 F => Mux3.IN5
 ledchek0 <= ledchek0.DB_MAX_OUTPUT_PORT_TYPE
 ledchek1 <= ledchek1.DB_MAX_OUTPUT_PORT_TYPE
-Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
-E <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
-C <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
+E <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+C <= Selector6.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Antirreboteesquema|pll10k:inst6

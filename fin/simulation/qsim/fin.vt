@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/29/2024 19:53:04"
+// Generated on "11/30/2024 07:50:05"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    fin
 // 
@@ -68,6 +68,7 @@ module fin_vlg_check_tst (
 	ADC_DIN22,
 	ADC_SCLK20,
 	aleb,
+	clearcountdoblar,
 	ea,
 	eg,
 	Md0,
@@ -75,7 +76,6 @@ module fin_vlg_check_tst (
 	Mi0,
 	Mi1,
 	o0,
-	pin_name1,
 	q,
 	velD,
 	velI,
@@ -86,6 +86,7 @@ input  ADC_CS_N21;
 input  ADC_DIN22;
 input  ADC_SCLK20;
 input  aleb;
+input  clearcountdoblar;
 input  ea;
 input  eg;
 input  Md0;
@@ -93,7 +94,6 @@ input  Md1;
 input  Mi0;
 input  Mi1;
 input  o0;
-input  pin_name1;
 input [15:0] q;
 input  velD;
 input  velI;
@@ -104,6 +104,7 @@ reg  ADC_CS_N21_expected;
 reg  ADC_DIN22_expected;
 reg  ADC_SCLK20_expected;
 reg  aleb_expected;
+reg  clearcountdoblar_expected;
 reg  ea_expected;
 reg  eg_expected;
 reg  Md0_expected;
@@ -111,7 +112,6 @@ reg  Md1_expected;
 reg  Mi0_expected;
 reg  Mi1_expected;
 reg  o0_expected;
-reg  pin_name1_expected;
 reg [15:0] q_expected;
 reg  velD_expected;
 reg  velI_expected;
@@ -121,6 +121,7 @@ reg  ADC_CS_N21_prev;
 reg  ADC_DIN22_prev;
 reg  ADC_SCLK20_prev;
 reg  aleb_prev;
+reg  clearcountdoblar_prev;
 reg  ea_prev;
 reg  eg_prev;
 reg  Md0_prev;
@@ -128,7 +129,6 @@ reg  Md1_prev;
 reg  Mi0_prev;
 reg  Mi1_prev;
 reg  o0_prev;
-reg  pin_name1_prev;
 reg [15:0] q_prev;
 reg  velD_prev;
 reg  velI_prev;
@@ -142,7 +142,6 @@ reg  Md1_expected_prev;
 reg  Mi0_expected_prev;
 reg  Mi1_expected_prev;
 reg  o0_expected_prev;
-reg  pin_name1_expected_prev;
 reg [15:0] q_expected_prev;
 
 reg  last_01_exp;
@@ -154,7 +153,6 @@ reg  last_Md1_exp;
 reg  last_Mi0_exp;
 reg  last_Mi1_exp;
 reg  last_o0_exp;
-reg  last_pin_name1_exp;
 reg [15:0] last_q_exp;
 
 reg trigger;
@@ -182,6 +180,7 @@ begin
 	ADC_DIN22_prev = ADC_DIN22;
 	ADC_SCLK20_prev = ADC_SCLK20;
 	aleb_prev = aleb;
+	clearcountdoblar_prev = clearcountdoblar;
 	ea_prev = ea;
 	eg_prev = eg;
 	Md0_prev = Md0;
@@ -189,7 +188,6 @@ begin
 	Mi0_prev = Mi0;
 	Mi1_prev = Mi1;
 	o0_prev = o0;
-	pin_name1_prev = pin_name1;
 	q_prev = q;
 	velD_prev = velD;
 	velI_prev = velI;
@@ -208,16 +206,51 @@ begin
 	Mi0_expected_prev = Mi0_expected;
 	Mi1_expected_prev = Mi1_expected;
 	o0_expected_prev = o0_expected;
-	pin_name1_expected_prev = pin_name1_expected;
 	q_expected_prev = q_expected;
 end
 
 
 
-// expected o0
+// expected Md0
 initial
 begin
-	o0_expected = 1'bX;
+	Md0_expected = 1'bX;
+	Md0_expected = #999000 1'b0;
+end 
+
+// expected Md1
+initial
+begin
+	Md1_expected = 1'bX;
+	Md1_expected = #999000 1'b0;
+end 
+
+// expected Mi0
+initial
+begin
+	Mi0_expected = 1'bX;
+	Mi0_expected = #999000 1'b0;
+end 
+
+// expected Mi1
+initial
+begin
+	Mi1_expected = 1'bX;
+	Mi1_expected = #999000 1'b0;
+end 
+
+// expected ea
+initial
+begin
+	ea_expected = 1'bX;
+	ea_expected = #999000 1'b0;
+end 
+
+// expected eg
+initial
+begin
+	eg_expected = 1'bX;
+	eg_expected = #999000 1'b0;
 end 
 
 // expected 01
@@ -226,52 +259,16 @@ begin
 	01_expected = 1'bX;
 end 
 
+// expected o0
+initial
+begin
+	o0_expected = 1'bX;
+end 
+
 // expected aleb
 initial
 begin
 	aleb_expected = 1'bX;
-end 
-
-// expected ea
-initial
-begin
-	ea_expected = 1'bX;
-end 
-
-// expected eg
-initial
-begin
-	eg_expected = 1'bX;
-end 
-
-// expected Md0
-initial
-begin
-	Md0_expected = 1'bX;
-end 
-
-// expected Md1
-initial
-begin
-	Md1_expected = 1'bX;
-end 
-
-// expected Mi0
-initial
-begin
-	Mi0_expected = 1'bX;
-end 
-
-// expected Mi1
-initial
-begin
-	Mi1_expected = 1'bX;
-end 
-
-// expected pin_name1
-initial
-begin
-	pin_name1_expected = 1'bX;
 end 
 // expected q[ 15 ]
 initial
@@ -354,7 +351,7 @@ begin
 	q_expected[0] = 1'bX;
 end 
 // generate trigger
-always @(01_expected or 01 or ADC_CS_N21_expected or ADC_CS_N21 or ADC_DIN22_expected or ADC_DIN22 or ADC_SCLK20_expected or ADC_SCLK20 or aleb_expected or aleb or ea_expected or ea or eg_expected or eg or Md0_expected or Md0 or Md1_expected or Md1 or Mi0_expected or Mi0 or Mi1_expected or Mi1 or o0_expected or o0 or pin_name1_expected or pin_name1 or q_expected or q or velD_expected or velD or velI_expected or velI)
+always @(01_expected or 01 or ADC_CS_N21_expected or ADC_CS_N21 or ADC_DIN22_expected or ADC_DIN22 or ADC_SCLK20_expected or ADC_SCLK20 or aleb_expected or aleb or clearcountdoblar_expected or clearcountdoblar or ea_expected or ea or eg_expected or eg or Md0_expected or Md0 or Md1_expected or Md1 or Mi0_expected or Mi0 or Mi1_expected or Mi1 or o0_expected or o0 or q_expected or q or velD_expected or velD or velI_expected or velI)
 begin
 	trigger <= ~trigger;
 end
@@ -364,8 +361,8 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected 01 = %b | expected ADC_CS_N21 = %b | expected ADC_DIN22 = %b | expected ADC_SCLK20 = %b | expected aleb = %b | expected ea = %b | expected eg = %b | expected Md0 = %b | expected Md1 = %b | expected Mi0 = %b | expected Mi1 = %b | expected o0 = %b | expected pin_name1 = %b | expected q = %b | expected velD = %b | expected velI = %b | ",01_expected_prev,ADC_CS_N21_expected_prev,ADC_DIN22_expected_prev,ADC_SCLK20_expected_prev,aleb_expected_prev,ea_expected_prev,eg_expected_prev,Md0_expected_prev,Md1_expected_prev,Mi0_expected_prev,Mi1_expected_prev,o0_expected_prev,pin_name1_expected_prev,q_expected_prev,velD_expected_prev,velI_expected_prev);
-	$display("| real 01 = %b | real ADC_CS_N21 = %b | real ADC_DIN22 = %b | real ADC_SCLK20 = %b | real aleb = %b | real ea = %b | real eg = %b | real Md0 = %b | real Md1 = %b | real Mi0 = %b | real Mi1 = %b | real o0 = %b | real pin_name1 = %b | real q = %b | real velD = %b | real velI = %b | ",01_prev,ADC_CS_N21_prev,ADC_DIN22_prev,ADC_SCLK20_prev,aleb_prev,ea_prev,eg_prev,Md0_prev,Md1_prev,Mi0_prev,Mi1_prev,o0_prev,pin_name1_prev,q_prev,velD_prev,velI_prev);
+	$display("| expected 01 = %b | expected ADC_CS_N21 = %b | expected ADC_DIN22 = %b | expected ADC_SCLK20 = %b | expected aleb = %b | expected clearcountdoblar = %b | expected ea = %b | expected eg = %b | expected Md0 = %b | expected Md1 = %b | expected Mi0 = %b | expected Mi1 = %b | expected o0 = %b | expected q = %b | expected velD = %b | expected velI = %b | ",01_expected_prev,ADC_CS_N21_expected_prev,ADC_DIN22_expected_prev,ADC_SCLK20_expected_prev,aleb_expected_prev,clearcountdoblar_expected_prev,ea_expected_prev,eg_expected_prev,Md0_expected_prev,Md1_expected_prev,Mi0_expected_prev,Mi1_expected_prev,o0_expected_prev,q_expected_prev,velD_expected_prev,velI_expected_prev);
+	$display("| real 01 = %b | real ADC_CS_N21 = %b | real ADC_DIN22 = %b | real ADC_SCLK20 = %b | real aleb = %b | real clearcountdoblar = %b | real ea = %b | real eg = %b | real Md0 = %b | real Md1 = %b | real Mi0 = %b | real Mi1 = %b | real o0 = %b | real q = %b | real velD = %b | real velI = %b | ",01_prev,ADC_CS_N21_prev,ADC_DIN22_prev,ADC_SCLK20_prev,aleb_prev,clearcountdoblar_prev,ea_prev,eg_prev,Md0_prev,Md1_prev,Mi0_prev,Mi1_prev,o0_prev,q_prev,velD_prev,velI_prev);
 `endif
 	if (
 		( 01_expected_prev !== 1'bx ) && ( 01_prev !== 01_expected_prev )
@@ -396,106 +393,93 @@ begin
 	if (
 		( ea_expected_prev !== 1'bx ) && ( ea_prev !== ea_expected_prev )
 		&& ((ea_expected_prev !== last_ea_exp) ||
-			on_first_change[6])
+			on_first_change[7])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port ea :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", ea_expected_prev);
 		$display ("     Real value = %b", ea_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[6] = 1'b0;
+		on_first_change[7] = 1'b0;
 		last_ea_exp = ea_expected_prev;
 	end
 	if (
 		( eg_expected_prev !== 1'bx ) && ( eg_prev !== eg_expected_prev )
 		&& ((eg_expected_prev !== last_eg_exp) ||
-			on_first_change[7])
+			on_first_change[8])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port eg :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", eg_expected_prev);
 		$display ("     Real value = %b", eg_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[7] = 1'b0;
+		on_first_change[8] = 1'b0;
 		last_eg_exp = eg_expected_prev;
 	end
 	if (
 		( Md0_expected_prev !== 1'bx ) && ( Md0_prev !== Md0_expected_prev )
 		&& ((Md0_expected_prev !== last_Md0_exp) ||
-			on_first_change[8])
+			on_first_change[9])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port Md0 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", Md0_expected_prev);
 		$display ("     Real value = %b", Md0_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[8] = 1'b0;
+		on_first_change[9] = 1'b0;
 		last_Md0_exp = Md0_expected_prev;
 	end
 	if (
 		( Md1_expected_prev !== 1'bx ) && ( Md1_prev !== Md1_expected_prev )
 		&& ((Md1_expected_prev !== last_Md1_exp) ||
-			on_first_change[9])
+			on_first_change[10])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port Md1 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", Md1_expected_prev);
 		$display ("     Real value = %b", Md1_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[9] = 1'b0;
+		on_first_change[10] = 1'b0;
 		last_Md1_exp = Md1_expected_prev;
 	end
 	if (
 		( Mi0_expected_prev !== 1'bx ) && ( Mi0_prev !== Mi0_expected_prev )
 		&& ((Mi0_expected_prev !== last_Mi0_exp) ||
-			on_first_change[10])
+			on_first_change[11])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port Mi0 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", Mi0_expected_prev);
 		$display ("     Real value = %b", Mi0_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[10] = 1'b0;
+		on_first_change[11] = 1'b0;
 		last_Mi0_exp = Mi0_expected_prev;
 	end
 	if (
 		( Mi1_expected_prev !== 1'bx ) && ( Mi1_prev !== Mi1_expected_prev )
 		&& ((Mi1_expected_prev !== last_Mi1_exp) ||
-			on_first_change[11])
+			on_first_change[12])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port Mi1 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", Mi1_expected_prev);
 		$display ("     Real value = %b", Mi1_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[11] = 1'b0;
+		on_first_change[12] = 1'b0;
 		last_Mi1_exp = Mi1_expected_prev;
 	end
 	if (
 		( o0_expected_prev !== 1'bx ) && ( o0_prev !== o0_expected_prev )
 		&& ((o0_expected_prev !== last_o0_exp) ||
-			on_first_change[12])
+			on_first_change[13])
 	)
 	begin
 		$display ("ERROR! Vector Mismatch for output port o0 :: @time = %t",  $realtime);
 		$display ("     Expected value = %b", o0_expected_prev);
 		$display ("     Real value = %b", o0_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[12] = 1'b0;
-		last_o0_exp = o0_expected_prev;
-	end
-	if (
-		( pin_name1_expected_prev !== 1'bx ) && ( pin_name1_prev !== pin_name1_expected_prev )
-		&& ((pin_name1_expected_prev !== last_pin_name1_exp) ||
-			on_first_change[13])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port pin_name1 :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", pin_name1_expected_prev);
-		$display ("     Real value = %b", pin_name1_prev);
-		nummismatches = nummismatches + 1;
 		on_first_change[13] = 1'b0;
-		last_pin_name1_exp = pin_name1_expected_prev;
+		last_o0_exp = o0_expected_prev;
 	end
 	if (
 		( q_expected_prev[0] !== 1'bx ) && ( q_prev[0] !== q_expected_prev[0] )
@@ -712,12 +696,12 @@ initial
 
 begin 
 $timeformat(-12,3," ps",6);
-#1000000;
+#100000000;
 if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
 	$display ("Simulation passed !");
-$stop;
+$finish;
 end 
 endmodule
 
@@ -735,6 +719,7 @@ wire ADC_CS_N21;
 wire ADC_DIN22;
 wire ADC_SCLK20;
 wire aleb;
+wire clearcountdoblar;
 wire ea;
 wire eg;
 wire Md0;
@@ -742,7 +727,6 @@ wire Md1;
 wire Mi0;
 wire Mi1;
 wire o0;
-wire pin_name1;
 wire [15:0] q;
 wire velD;
 wire velI;
@@ -758,6 +742,7 @@ fin i1 (
 	.ADC_DOUT(ADC_DOUT),
 	.ADC_SCLK20(ADC_SCLK20),
 	.aleb(aleb),
+	.clearcountdoblar(clearcountdoblar),
 	.clk50M(clk50M),
 	.ea(ea),
 	.eg(eg),
@@ -766,7 +751,6 @@ fin i1 (
 	.Mi0(Mi0),
 	.Mi1(Mi1),
 	.o0(o0),
-	.pin_name1(pin_name1),
 	.q(q),
 	.reset(reset),
 	.s(s),
@@ -787,7 +771,7 @@ end
 initial
 begin
 	reset = 1'b0;
-	reset = #180000 1'b1;
+	reset = #160000 1'b1;
 end 
 
 // s
@@ -817,6 +801,7 @@ fin_vlg_check_tst tb_out(
 	.ADC_DIN22(ADC_DIN22),
 	.ADC_SCLK20(ADC_SCLK20),
 	.aleb(aleb),
+	.clearcountdoblar(clearcountdoblar),
 	.ea(ea),
 	.eg(eg),
 	.Md0(Md0),
@@ -824,7 +809,6 @@ fin_vlg_check_tst tb_out(
 	.Mi0(Mi0),
 	.Mi1(Mi1),
 	.o0(o0),
-	.pin_name1(pin_name1),
 	.q(q),
 	.velD(velD),
 	.velI(velI),

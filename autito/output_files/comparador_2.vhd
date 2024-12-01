@@ -71,7 +71,7 @@ ARCHITECTURE SYN OF comparador_2 IS
 	END COMPONENT;
 
 BEGIN
-	sub_wire1_bv(15 DOWNTO 0) <= "0000000000000010";
+	sub_wire1_bv(15 DOWNTO 0) <= "0000010111011100";
 	sub_wire1    <= To_stdlogicvector(sub_wire1_bv);
 	aleb    <= sub_wire0;
 

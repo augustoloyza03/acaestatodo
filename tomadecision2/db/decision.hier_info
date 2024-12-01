@@ -1,6 +1,7 @@
 |decisionfinal
 ea <= decision:inst.ea
 reset => decision:inst.reset
+aviso => decision:inst.aviso
 clk => decision:inst.clk
 O1 => decision:inst.O1
 O0 => decision:inst.O0
@@ -26,12 +27,8 @@ eg <= decision:inst.eg
 
 
 |decisionfinal|decision:inst
-reset => eg~reg0.ACLR
-reset => ea~reg0.PRESET
-reset => GD~reg0.ACLR
-reset => GI~reg0.ACLR
-reset => aux[1].ENA
-reset => aux[0].ENA
+reset => process_0.IN0
+aviso => process_0.IN1
 clk => aux[0].CLK
 clk => aux[1].CLK
 clk => eg~reg0.CLK

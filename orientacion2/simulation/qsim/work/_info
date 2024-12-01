@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\Users\Administrador\Documents\GitHub\acaestatodo\orientacion2\simulation\qsim
+vorientacion
+Z1 !s100 ?igEaU4OF_Jz^[>b[Cbci3
+Z2 I1iW[Nk5B?;;>g7>O2`c062
+Z3 V_QQLNCf>DXXLCnXVRN^V[3
+Z4 dF:\Users\Administrador\Documents\GitHub\acaestatodo\orientacion2\simulation\qsim
+Z5 w1732991461
+Z6 8orientacion.vo
+Z7 Forientacion.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|orientacion.vo|
+Z10 o-work work -O0
+Z11 !s108 1732991462.585000
+Z12 !s107 orientacion.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vorientacion_vlg_check_tst
+Z13 !s100 ZP2d8DLQ_=dOCJnzYjFkz3
+Z14 IK?JaC8z]SUgeL571adi5o2
+Z15 VW^I[?9]PTgha[hKnZgjfZ0
+R4
+Z16 w1732991460
+Z17 8orientacion.vt
+Z18 Forientacion.vt
+L0 67
+R8
+r1
+31
+Z19 !s108 1732991462.770000
+Z20 !s107 orientacion.vt|
+Z21 !s90 -work|work|orientacion.vt|
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vorientacion_vlg_sample_tst
+Z22 !s100 7cS9]LAJl`o4fHg__@gK22
+Z23 IGd5nJW6afU]B4g_WKSc]V1
+Z24 VjO5J9ZdZZN@1z6=KXhhYQ3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+31
+R19
+R20
+R21
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vorientacion_vlg_vec_tst
+Z25 I3>07jKb[5:8ZTT4l=8XHR3
+Z26 VRPE[`?f<f=inFhdOF9:]a1
+R4
+R16
+R17
+R18
+Z27 L0 216
+R8
+r1
+31
+R19
+R20
+R21
+R10
+Z28 !s100 [zcU[1Ok7:nLhRCEo`cBh2
+!i10b 1
+!s85 0
+!s101 -O0
+vubicacion
+Z29 !s100 2PF;j>BR5okmj2UBn?JNb0
+Z30 I2z2IBc<aYjPoZDh?@H8m03
+Z31 VTTVdBA:AW8KS7Mj]AzNK82
+R4
+Z32 w1732992925
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+!i10b 1
+!s85 0
+Z33 !s108 1732992926.224000
+R12
+!s101 -O0
+vubicacion_vlg_check_tst
+!i10b 1
+Z34 !s100 :b[G^Xb[b36TCB4H>52130
+Z35 I]1>>5C4`SndB>Zkl@Z4HK3
+Z36 Vi7d24;I:cY_zEDWcf==E31
+R4
+Z37 w1732992924
+R17
+R18
+L0 69
+R8
+r1
+!s85 0
+31
+Z38 !s108 1732992926.423000
+Z39 !s107 orientacion.vt|
+R21
+!s101 -O0
+R10
+vubicacion_vlg_sample_tst
+!i10b 1
+Z40 !s100 P2m6W7kXUESTYj9zOe@9:1
+Z41 I:?Wm4j[im3`ofeH[24hO71
+Z42 VA7U_HiYP;JQf6CW`@EJ@[1
+R4
+R37
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R38
+R39
+R21
+!s101 -O0
+R10
+vubicacion_vlg_vec_tst
+!i10b 1
+Z43 !s100 Q6;J]`KIJP]^cn>;5[zD;1
+Z44 I>ObzUMz<;PL5=<c:@kdmF3
+Z45 VOdCGoY;58gEHJok_oSKaF0
+R4
+R37
+R17
+R18
+Z46 L0 238
+R8
+r1
+!s85 0
+31
+R38
+R39
+R21
+!s101 -O0
+R10

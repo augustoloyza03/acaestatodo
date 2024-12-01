@@ -1,29 +1,27 @@
 |prueba1
 M1I <= doblar2:inst.M1I
 clk => doblar2:inst.clk
-clk => contador_doblar:inst2.inclk0
+clk => pll:inst1.inclk0
 reset => doblar2:inst.reset
-indicacion1 => doblar2:inst.indicacion1
-indicacion0 => doblar2:inst.indicacion0
 M0I <= doblar2:inst.M0I
 M1D <= doblar2:inst.M1D
 M0D <= doblar2:inst.M0D
 velmi <= doblar2:inst.velmi
 velmd <= doblar2:inst.velmd
-clk50k <= contador_doblar:inst2.clk50k
-tc1 <= contador_doblar:inst2.tc1
-tc2 <= contador_doblar:inst2.tc2
+clk50k <= pll:inst1.c0
+tc1 <= comparador_1:inst4.aleb
+tc2 <= comparador_2:inst3.aleb
 
 
 |prueba1|doblar2:inst
-clk => state~4.DATAIN
-reset => state~6.DATAIN
+clk => state~11.DATAIN
+reset => state~13.DATAIN
 tc1 => Selector1.IN3
-tc1 => Selector2.IN3
-tc1 => Selector0.IN1
-tc1 => Selector0.IN2
+tc1 => Selector4.IN2
+tc2 => Selector2.IN3
 tc2 => Selector3.IN3
-tc2 => Selector0.IN3
+tc2 => Selector5.IN2
+tc2 => Selector6.IN2
 indicacion1 => Equal0.IN1
 indicacion1 => Equal1.IN1
 indicacion1 => Equal2.IN0
@@ -35,22 +33,14 @@ indicacion0 => Equal3.IN0
 M1I <= M1I.DB_MAX_OUTPUT_PORT_TYPE
 M0I <= M0I.DB_MAX_OUTPUT_PORT_TYPE
 M1D <= M1D.DB_MAX_OUTPUT_PORT_TYPE
-M0D <= M1I.DB_MAX_OUTPUT_PORT_TYPE
-velmi <= velmi.DB_MAX_OUTPUT_PORT_TYPE
-velmd <= velmi.DB_MAX_OUTPUT_PORT_TYPE
-clc <= clc.DB_MAX_OUTPUT_PORT_TYPE
+M0D <= M0D.DB_MAX_OUTPUT_PORT_TYPE
+velmi <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+velmd <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+clc <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+aviso <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|prueba1|contador_doblar:inst2
-tc2 <= comparador_2:inst3.aleb
-inclk0 => pll:inst1.inclk0
-areset => pll:inst1.areset
-areset => lpm_counter0:inst.aclr
-tc1 <= comparador_1:inst2.aleb
-clk50k <= pll:inst1.c0
-
-
-|prueba1|contador_doblar:inst2|comparador_2:inst3
+|prueba1|comparador_1:inst4
 dataa[0] => lpm_compare:LPM_COMPARE_component.dataa[0]
 dataa[1] => lpm_compare:LPM_COMPARE_component.dataa[1]
 dataa[2] => lpm_compare:LPM_COMPARE_component.dataa[2]
@@ -70,7 +60,7 @@ dataa[15] => lpm_compare:LPM_COMPARE_component.dataa[15]
 aleb <= lpm_compare:LPM_COMPARE_component.aleb
 
 
-|prueba1|contador_doblar:inst2|comparador_2:inst3|lpm_compare:LPM_COMPARE_component
+|prueba1|comparador_1:inst4|lpm_compare:LPM_COMPARE_component
 dataa[0] => cmpr_1hj:auto_generated.dataa[0]
 dataa[1] => cmpr_1hj:auto_generated.dataa[1]
 dataa[2] => cmpr_1hj:auto_generated.dataa[2]
@@ -114,7 +104,7 @@ aneb <= <GND>
 ageb <= <GND>
 
 
-|prueba1|contador_doblar:inst2|comparador_2:inst3|lpm_compare:LPM_COMPARE_component|cmpr_1hj:auto_generated
+|prueba1|comparador_1:inst4|lpm_compare:LPM_COMPARE_component|cmpr_1hj:auto_generated
 aleb <= aleb.DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => _.IN0
 dataa[0] => op_1.IN31
@@ -182,7 +172,7 @@ datab[15] => _.IN1
 datab[15] => op_1.IN2
 
 
-|prueba1|contador_doblar:inst2|lpm_counter0:inst
+|prueba1|lpm_counter0:inst5
 aclr => lpm_counter:LPM_COUNTER_component.aclr
 clock => lpm_counter:LPM_COUNTER_component.clock
 q[0] <= lpm_counter:LPM_COUNTER_component.q[0]
@@ -203,7 +193,7 @@ q[14] <= lpm_counter:LPM_COUNTER_component.q[14]
 q[15] <= lpm_counter:LPM_COUNTER_component.q[15]
 
 
-|prueba1|contador_doblar:inst2|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component
+|prueba1|lpm_counter0:inst5|lpm_counter:LPM_COUNTER_component
 clock => cntr_v8i:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => ~NO_FANOUT~
@@ -268,7 +258,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|prueba1|contador_doblar:inst2|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component|cntr_v8i:auto_generated
+|prueba1|lpm_counter0:inst5|lpm_counter:LPM_COUNTER_component|cntr_v8i:auto_generated
 aclr => counter_reg_bit[15].IN0
 clock => counter_reg_bit[15].CLK
 clock => counter_reg_bit[14].CLK
@@ -304,13 +294,13 @@ q[14] <= counter_reg_bit[14].DB_MAX_OUTPUT_PORT_TYPE
 q[15] <= counter_reg_bit[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|prueba1|contador_doblar:inst2|pll:inst1
+|prueba1|pll:inst1
 areset => altpll:altpll_component.areset
 inclk0 => altpll:altpll_component.inclk[0]
 c0 <= altpll:altpll_component.clk[0]
 
 
-|prueba1|contador_doblar:inst2|pll:inst1|altpll:altpll_component
+|prueba1|pll:inst1|altpll:altpll_component
 inclk[0] => pll_altpll1:auto_generated.inclk[0]
 inclk[1] => pll_altpll1:auto_generated.inclk[1]
 fbin => ~NO_FANOUT~
@@ -370,7 +360,7 @@ fref <= <GND>
 icdrclk <= <GND>
 
 
-|prueba1|contador_doblar:inst2|pll:inst1|altpll:altpll_component|pll_altpll1:auto_generated
+|prueba1|pll:inst1|altpll:altpll_component|pll_altpll1:auto_generated
 areset => pll1.ARESET
 clk[0] <= pll1.CLK
 clk[1] <= pll1.CLK1
@@ -381,7 +371,7 @@ inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
 
 
-|prueba1|contador_doblar:inst2|comparador_1:inst2
+|prueba1|comparador_2:inst3
 dataa[0] => lpm_compare:LPM_COMPARE_component.dataa[0]
 dataa[1] => lpm_compare:LPM_COMPARE_component.dataa[1]
 dataa[2] => lpm_compare:LPM_COMPARE_component.dataa[2]
@@ -401,7 +391,7 @@ dataa[15] => lpm_compare:LPM_COMPARE_component.dataa[15]
 aleb <= lpm_compare:LPM_COMPARE_component.aleb
 
 
-|prueba1|contador_doblar:inst2|comparador_1:inst2|lpm_compare:LPM_COMPARE_component
+|prueba1|comparador_2:inst3|lpm_compare:LPM_COMPARE_component
 dataa[0] => cmpr_1hj:auto_generated.dataa[0]
 dataa[1] => cmpr_1hj:auto_generated.dataa[1]
 dataa[2] => cmpr_1hj:auto_generated.dataa[2]
@@ -445,7 +435,7 @@ aneb <= <GND>
 ageb <= <GND>
 
 
-|prueba1|contador_doblar:inst2|comparador_1:inst2|lpm_compare:LPM_COMPARE_component|cmpr_1hj:auto_generated
+|prueba1|comparador_2:inst3|lpm_compare:LPM_COMPARE_component|cmpr_1hj:auto_generated
 aleb <= aleb.DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => _.IN0
 dataa[0] => op_1.IN31

@@ -61,13 +61,18 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_location_assignment PIN_A9 -to ADC_DOUT
-set_location_assignment PIN_L3 -to ea
-set_location_assignment PIN_B1 -to eg
 set_location_assignment PIN_B14 -to ADC_SCLK20
 set_location_assignment PIN_B10 -to ADC_DIN22
 set_location_assignment PIN_A10 -to ADC_CS_N21
 set_location_assignment PIN_R13 -to velD
 set_location_assignment PIN_T12 -to velI
+set_location_assignment PIN_A13 -to o0
+set_location_assignment PIN_A15 -to 01
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "F:/Users/Administrador/Documents/GitHub/acaestatodo/fin/Waveform1.vwf"
+set_global_assignment -name VHDL_FILE ../../comp/comp.vhd
 set_global_assignment -name VHDL_FILE ../orientacion2/ubicacionparte2v2.vhd
 set_global_assignment -name BDF_FILE ../orientacion2/ubicacion.bdf
 set_global_assignment -name VHDL_FILE ../orientacion2/SumaoResta.vhd
@@ -99,12 +104,14 @@ set_global_assignment -name BDF_FILE ../control/actualizacion_paredes.bdf
 set_global_assignment -name BDF_FILE fin.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform1.vwf
-set_location_assignment PIN_A13 -to o0
-set_location_assignment PIN_A15 -to 01
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name QIP_FILE ../autito/output_files/comparador_2.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_location_assignment PIN_B13 -to m[3]
+set_location_assignment PIN_A11 -to m[2]
+set_location_assignment PIN_D1 -to m[1]
+set_location_assignment PIN_F3 -to m[0]
+set_location_assignment PIN_L3 -to a0
+set_location_assignment PIN_B1 -to a1
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "F:/Users/Administrador/Documents/GitHub/fin/output_files/Waveform2.vwf"

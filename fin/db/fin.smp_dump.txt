@@ -47,9 +47,15 @@ state.Sg 0 0 1 0 0 0 0 1
 state.Eg 0 1 0 0 0 0 0 1 
 state.Og 1 0 0 0 0 0 0 1 
 
-State Machine - |fin|doblar2:inst6|state
-Name state.reversa state.izq state.der state.parado 
-state.parado 0 0 0 0 
-state.der 0 0 1 1 
-state.izq 0 1 0 1 
-state.reversa 1 0 0 1 
+State Machine - |fin|doblar2:inst15|state
+Name state.reversa3 state.izq3 state.der3 state.reversa2 state.izq2 state.der2 state.reversa state.izq state.der state.parado 
+state.parado 0 0 0 0 0 0 0 0 0 0 
+state.der 0 0 0 0 0 0 0 0 1 1 
+state.izq 0 0 0 0 0 0 0 1 0 1 
+state.reversa 0 0 0 0 0 0 1 0 0 1 
+state.der2 0 0 0 0 0 1 0 0 0 1 
+state.izq2 0 0 0 0 1 0 0 0 0 1 
+state.reversa2 0 0 0 1 0 0 0 0 0 1 
+state.der3 0 0 1 0 0 0 0 0 0 1 
+state.izq3 0 1 0 0 0 0 0 0 0 1 
+state.reversa3 1 0 0 0 0 0 0 0 0 1 

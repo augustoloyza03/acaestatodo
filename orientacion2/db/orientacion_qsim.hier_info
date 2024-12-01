@@ -22,32 +22,31 @@ clearcountdoblar <= orientacion:inst1.clearcountdoblar
 
 
 |ubicacion|orientacion:inst1
-clk => state~5.DATAIN
+clk => o1_reg.CLK
+clk => o0_reg.CLK
+clk => state~33.DATAIN
 gd => Mux0.IN9
 gd => Mux1.IN9
 gd => Mux2.IN9
 gd => Mux3.IN9
+gd => Equal0.IN1
 gi => Mux0.IN8
 gi => Mux1.IN8
 gi => Mux2.IN8
 gi => Mux3.IN8
-reset => state~9.DATAIN
+gi => Equal0.IN0
+reset => o1_reg.ACLR
+reset => o0_reg.ACLR
+reset => state~37.DATAIN
 tc1 => ~NO_FANOUT~
 tc2 => Mux0.IN10
 tc2 => Mux1.IN10
 tc2 => Mux2.IN10
 tc2 => Mux3.IN10
-tc2 => Selector4.IN9
-tc2 => Selector5.IN9
-tc2 => Selector6.IN9
-tc2 => Selector7.IN9
-tc2 => Selector0.IN2
-tc2 => Selector1.IN2
-tc2 => Selector2.IN2
-tc2 => Selector3.IN2
-clearcountdoblar <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
-o0 <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
-o1 <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+tc2 => Equal0.IN2
+clearcountdoblar <= process_2~2.DB_MAX_OUTPUT_PORT_TYPE
+o0 <= o0_reg.DB_MAX_OUTPUT_PORT_TYPE
+o1 <= o1_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ubicacion|SumaoResta:inst

@@ -24,174 +24,114 @@ end entity;
 architecture rtl of orientacion is
 
 	-- Build an enumerated type for the state machine
-	type state_type is (Nd,Sd,Ed,Od,Ng,Sg,Eg,Og);
+	type state_type is (Nd, Sd, Ed, Od, Ng, Sg, Eg, Og);
 
 	-- Register to hold the current state
-	signal state   : state_type;
-	signal g: std_logic_vector (2 downto 0);
+	signal state : state_type;
+	signal g : std_logic_vector(3 downto 0);
+
+	-- Registers to hold outputs
+	signal o0_reg : std_logic := '0';
+	signal o1_reg : std_logic := '0';
 
 begin
-g<= (gi & gd & tc2);---uno en todo momento hasta que termina
-	-- Logic to advance to the next state
+     process (clk, reset)
+	  begin
+       if (gd='1' and gi='1') or (gd='0' and gi='0') then	
+		g <= (gi & gd & '0' & tc2);
+		elsif (gd='1' and gi='0') or (gd='0' and gi='1')  then                  -- Uno en todo momento hasta que termina
+      g <= (gi & gd & tc1 & '0');
+		end if;
+		-- Logic to advance to the next state
+		
+		
+			if reset = '0' then
+				state <= Nd;
+			elsif (rising_edge(clk)) then
+				case state is
+					when Nd =>
+						case g is
+							when  "0001" => state <= Nd;
+							when "1101" => state <= Sg;
+							when "1010" => state <= Og;
+							when "0110" => state <= Eg;
+							when others => state <= Nd;
+						end case;
+					when Ed =>
+						case g is
+							when "0010" => state <= Ed;
+							when "0110" => state <= Sg;
+							when "1010" => state <= Ng;
+							when "1101" => state <= Og;
+							when others => state <= Ed;
+						end case;
+					when Sd =>
+						case g is
+							when "0010" => state <= Sd;
+							when "0110" => state <= Og;
+							when "1010" => state <= Eg;
+							when "1101" => state <= Ng;
+							when others => state <= Sd;
+						end case;
+					when Od =>
+						case g is
+							when "0010" => state <= Od;
+							when "0110" => state <= Ng;
+							when "1010" => state <= Sg;
+							when "1101" => state <= Eg;
+							when others => state <= Od;
+						end case;
+					when Ng =>
+						if g = "0000"  then state <= Nd; end if;
+					when Eg =>
+						if g = "0000" then state <= Ed; end if;
+					when Sg =>
+						if g = "0000" then state <= Sd; end if;
+					when Og =>
+						if g = "0000" then state <= Od; end if;
+				end case;
+			end if;
+	end process;
+
+	-- Update outputs based on the state
 	process (clk, reset)
 	begin
 		if reset = '0' then
-			state <= Nd;
+			o0_reg <= '1';
+			o1_reg <= '1';
 		elsif (rising_edge(clk)) then
 			case state is
-				when Nd=>
-					case g is
-						when "001" =>
-							state<=Nd;
-						when "011" =>
-							state<=Eg;
-						when "101" =>
-							state<=Og;
-						when "111" =>
-							state<=Sg;
-						when others =>
-						state<=Nd;
-					end case;
-				when Ed=>
-					case g is
-						when "001" =>
-							state<=Ed;
-						when "011" =>
-							state<=Sg;
-						when "101" =>
-							state<=Ng;
-						when "111" =>
-							state<=Og;
-						when others =>
-						state<=Ed;
-					end case;
-				when Sd=>
-					case g is
-						when "001" =>
-							state<=Sd;
-						when "011" =>
-							state<=Og;
-						when "101" =>
-							state<=Eg;
-						when "111" =>
-							state<=Ng;
-						when others =>
-						state<=Sd;
-					end case;
+				when Nd =>
+					o0_reg <= '1';
+					o1_reg <= '1';
+				when Ed =>
+					o0_reg <= '1';
+					o1_reg <= '0';
+				when Sd =>
+					o0_reg <= '0';
+					o1_reg <= '0';
 				when Od =>
-					case g is
-						when "001" =>
-							state<=Od;
-						when "011" =>
-							state<=Ng;
-						when "101" =>
-							state<=Sg;
-						when "111" =>
-							state<=Eg;
-						when others =>
-						state<=Od;
-					end case;
-				when Ng=>
-					case g is
-						when "000" =>
-							state<=Nd;
-						when "001" =>
-							state<=Ng;
-						when "011" =>
-							state<=Ng;
-						when "101" =>
-							state<=Ng;
-						when "111" =>
-							state<=Ng;
-						when others =>
-						state<=Nd;
-					end case;
-				when Eg=>
-					case g is
-						when "000" =>
-							state<=Ed;
-						when "001" =>
-							state<=Eg;
-						when "011" =>
-							state<=Eg;
-						when "101" =>
-							state<=Eg;
-						when "111" =>
-							state<=Eg;
-						when others =>
-						state<=Ed;
-					end case;
-				when Sg=>
-					case g is
-						when "000" =>
-							state<=Sd;
-						when "001" =>
-							state<=Sg;
-						when "011" =>
-							state<=Sg;
-						when "101" =>
-							state<=Sg;
-						when "111" =>
-							state<=Sg;
-						when others =>
-						state<=Sd;
-					end case;
-				when Og =>
-					case g is
-						when "000" =>
-							state<=Od;
-						when "001" =>
-							state<=Og;
-						when "011" =>
-							state<=Og;
-						when "101" =>
-							state<=Og;
-						when "111" =>
-							state<=Og;
-						when others =>
-						state<=Od;
-					end case;	
+					o0_reg <= '0';
+					o1_reg <= '1';
+				when others =>
+					-- Mantener el valor anterior en los estados Ng, Sg, Eg, Og
+					null;
 			end case;
 		end if;
 	end process;
 
-	-- Output depends solely on the current state
+	-- Assign the outputs
+	o0 <= o0_reg;
+	o1 <= o1_reg;
+
+	-- Control de clearcountdoblar
 	process (state)
 	begin
-		case state is
-			when Nd =>
-				o0 <= '1';
-				o1 <= '1';
-				clearcountdoblar <= '1';
-			when Ed =>
-				o0 <= '1';
-				o1 <= '0';
-				clearcountdoblar <= '1';
-			when Sd =>
-				o0 <= '0';
-				o1 <= '0';
-				clearcountdoblar <= '1';
-			when Od =>
-				o0 <= '0';
-				o1 <= '1';
-				clearcountdoblar <= '1';
-			when Ng =>
-				o0 <= '1';
-				o1 <= '1';
-				clearcountdoblar <= '0';
-			when Eg =>
-				o0 <= '1';
-				o1 <= '0';
-				clearcountdoblar <= '0';
-			when Sg =>
-				o0 <= '0';
-				o1 <= '0';
-				clearcountdoblar <= '0';
-			when Og =>
-				o0 <= '0';
-				o1 <= '1';
-				clearcountdoblar <= '0';
-		end case;
+		if state = Ng or state = Sg or state = Eg or state = Og then
+			clearcountdoblar <= '0';
+		else
+			clearcountdoblar <= '1';
+		end if;
 	end process;
 
 end rtl;

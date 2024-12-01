@@ -4,78 +4,78 @@ K3
 cModel Technology
 Z0 dF:\Users\Administrador\Documents\GitHub\fin\simulation\qsim
 vfin
-Z1 I29nT@Sn4gzQDPBE<MM`[n0
-Z2 V6begJ8Fc@^j70NzL9?DA12
-Z3 dF:\Users\Administrador\Documents\GitHub\fin\simulation\qsim
-Z4 w1732920676
-Z5 8fin.vo
-Z6 Ffin.vo
+Z1 !s100 WhF]Ug?15TJ6FIcFi_i9>1
+Z2 I:`mM2Y6SG[jgKghEim5Cf2
+Z3 V@ed3BfkMBQ0[A`_F?ia163
+Z4 dF:\Users\Administrador\Documents\GitHub\acaestatodo\fin\simulation\qsim
+Z5 w1732963806
+Z6 8fin.vo
+Z7 Ffin.vo
 L0 31
-Z7 OV;L;10.1d;51
+Z8 OV;L;10.1d;51
 r1
 31
-Z8 !s90 -work|work|fin.vo|
-Z9 o-work work -O0
+Z9 !s90 -work|work|fin.vo|
+Z10 o-work work -O0
 !i10b 1
-Z10 !s100 ZjiD^D?9:TCd2fSSY2mcG0
 !s85 0
-Z11 !s108 1732920677.556000
+Z11 !s108 1732963808.298000
 Z12 !s107 fin.vo|
 !s101 -O0
 vfin_vlg_check_tst
 Z13 !s100 ;ze5h;QV@Y4UBN>`b86181
 Z14 IE=bTGj>MHmK]AXO]Q@l=e2
 Z15 Vzh[O>e0002WK[k34USF9Y3
-R3
-Z16 w1732894954
-Z17 8fin.vt
-Z18 Ffin.vt
+Z16 dF:\Users\Administrador\Documents\GitHub\fin\simulation\qsim
+Z17 w1732894954
+Z18 8fin.vt
+Z19 Ffin.vt
 L0 65
-R7
+R8
 r1
 31
-Z19 !s108 1732894958.814000
-Z20 !s107 fin.vt|
-Z21 !s90 -work|work|fin.vt|
-R9
+Z20 !s108 1732894958.814000
+Z21 !s107 fin.vt|
+Z22 !s90 -work|work|fin.vt|
+R10
 !i10b 1
 !s85 0
 !s101 -O0
 vfin_vlg_sample_tst
 !i10b 1
-Z22 !s100 @Y@aW:ebodg>o@YM4>?1@0
-Z23 IoK>o6WV:[5GEldMEZ?LfC3
-Z24 VXeo<]NLGc4JJDOKc>C67`2
-R3
-w1732920674
-R17
+Z23 !s100 @Y@aW:ebodg>o@YM4>?1@0
+Z24 IoK>o6WV:[5GEldMEZ?LfC3
+Z25 VXeo<]NLGc4JJDOKc>C67`2
+R4
+w1732963805
 R18
+R19
 L0 29
-R7
+R8
 r1
 !s85 0
 31
-!s108 1732920677.890000
+!s108 1732963808.680000
 !s107 fin.vt|
-R21
+R22
 !s101 -O0
-R9
+R10
 vfin_vlg_vec_tst
-Z25 IT4@Ko55Vd@7bV9f9R>Xi@2
-Z26 Vaz;:4_eOSW181=:eS10MP1
-R3
+Z26 IT4@Ko55Vd@7bV9f9R>Xi@2
+Z27 Vaz;:4_eOSW181=:eS10MP1
 R16
 R17
 R18
-Z27 L0 430
-R7
+R19
+Z28 L0 430
+R8
 r1
 31
-R19
 R20
 R21
-R9
-Z28 !s100 K[4E1:I8ol71C0<KP^:8^0
+R22
+R10
+Z29 !s100 K[4E1:I8ol71C0<KP^:8^0
 !i10b 1
 !s85 0
 !s101 -O0

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fin
-Fri Nov 29 19:56:30 2024
+Sat Nov 30 16:46:40 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -19,28 +19,26 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  11. State Machine - |fin|Antirreboteesquema:inst26|Antirrebote:inst|estado
  12. State Machine - |fin|ubicacion:inst21|ubicacionparte2v2:inst2|fstate
  13. State Machine - |fin|ubicacion:inst21|orientacion:inst1|state
- 14. State Machine - |fin|doblar2:inst6|state
- 15. Registers Removed During Synthesis
- 16. Removed Registers Triggering Further Register Optimizations
- 17. General Register Statistics
- 18. Inverted Register Statistics
- 19. Multiplexer Restructuring Statistics (Restructuring Performed)
- 20. Parameter Settings for User Entity Instance: pll1:inst5|altpll:altpll_component
- 21. Parameter Settings for User Entity Instance: comparador_1:inst18|lpm_compare:LPM_COMPARE_component
- 22. Parameter Settings for User Entity Instance: lpm_counter0:inst9|lpm_counter:LPM_COUNTER_component
- 23. Parameter Settings for User Entity Instance: comparador_2:inst|lpm_compare:LPM_COMPARE_component
- 24. Parameter Settings for User Entity Instance: Antirreboteesquema:inst26|pll10k:inst6|altpll:altpll_component
- 25. Parameter Settings for User Entity Instance: Antirreboteesquema:inst26|comparador:inst2|lpm_compare:LPM_COMPARE_component
- 26. Parameter Settings for User Entity Instance: Antirreboteesquema:inst26|lpm_counter0:inst1|lpm_counter:LPM_COUNTER_component
- 27. Parameter Settings for User Entity Instance: Antirreboteesquema:inst26|pll:inst3|altpll:altpll_component
- 28. Parameter Settings for User Entity Instance: esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0
- 29. Parameter Settings for User Entity Instance: esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL
- 30. Parameter Settings for User Entity Instance: esqumaticoADC:inst23|pll1:inst2|altpll:altpll_component
- 31. Parameter Settings for User Entity Instance: esqumaticoADC:inst23|comparador_adc:inst1|lpm_compare:LPM_COMPARE_component
- 32. Parameter Settings for User Entity Instance: esqumaticoADC:inst23|comparador_adc:inst4|lpm_compare:LPM_COMPARE_component
- 33. altpll Parameter Settings by Entity Instance
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+ 14. State Machine - |fin|doblar2:inst15|state
+ 15. User-Specified and Inferred Latches
+ 16. Registers Removed During Synthesis
+ 17. Removed Registers Triggering Further Register Optimizations
+ 18. General Register Statistics
+ 19. Inverted Register Statistics
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Parameter Settings for User Entity Instance: pll1:inst5|altpll:altpll_component
+ 22. Parameter Settings for User Entity Instance: Antirreboteesquema:inst26|pll10k:inst6|altpll:altpll_component
+ 23. Parameter Settings for User Entity Instance: Antirreboteesquema:inst26|comparador:inst2|lpm_compare:LPM_COMPARE_component
+ 24. Parameter Settings for User Entity Instance: Antirreboteesquema:inst26|lpm_counter0:inst1|lpm_counter:LPM_COUNTER_component
+ 25. Parameter Settings for User Entity Instance: Antirreboteesquema:inst26|pll:inst3|altpll:altpll_component
+ 26. Parameter Settings for User Entity Instance: esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0
+ 27. Parameter Settings for User Entity Instance: esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL
+ 28. Parameter Settings for User Entity Instance: esqumaticoADC:inst23|pll1:inst2|altpll:altpll_component
+ 29. Parameter Settings for User Entity Instance: esqumaticoADC:inst23|comparador_adc:inst1|lpm_compare:LPM_COMPARE_component
+ 30. Parameter Settings for User Entity Instance: esqumaticoADC:inst23|comparador_adc:inst4|lpm_compare:LPM_COMPARE_component
+ 31. altpll Parameter Settings by Entity Instance
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -66,16 +64,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 29 19:56:29 2024           ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 30 16:46:40 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; fin                                             ;
 ; Top-level Entity Name              ; fin                                             ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 455                                             ;
-;     Total combinational functions  ; 412                                             ;
-;     Dedicated logic registers      ; 204                                             ;
-; Total registers                    ; 204                                             ;
-; Total pins                         ; 36                                              ;
+; Total logic elements               ; 535                                             ;
+;     Total combinational functions  ; 489                                             ;
+;     Dedicated logic registers      ; 246                                             ;
+; Total registers                    ; 246                                             ;
+; Total pins                         ; 27                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -181,64 +179,62 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                        ;
-+------------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                           ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                    ; Library ;
-+------------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------+---------+
-; ../orientacion2/ubicacionparte2v2.vhd                      ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/orientacion2/ubicacionparte2v2.vhd                      ;         ;
-; ../orientacion2/ubicacion.bdf                              ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/orientacion2/ubicacion.bdf                              ;         ;
-; ../orientacion2/SumaoResta.vhd                             ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/orientacion2/SumaoResta.vhd                             ;         ;
-; ../orientacion2/orientacion.vhd                            ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/orientacion2/orientacion.vhd                            ;         ;
-; ../partekeko/lpm_counter0.vhd                              ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/partekeko/lpm_counter0.vhd                              ;         ;
-; ../contadordecuadriculas2/contador_de_cuadriculas.vhd      ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/contadordecuadriculas2/contador_de_cuadriculas.vhd      ;         ;
-; ../contadordecuadriculas2/contadorcuadriculas.bdf          ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/contadordecuadriculas2/contadorcuadriculas.bdf          ;         ;
-; ../autito/Bloque_ADC_controller/altera_up_avalon_adv_adc.v ; yes             ; User Verilog HDL File              ; F:/Users/Administrador/Documents/GitHub/autito/Bloque_ADC_controller/altera_up_avalon_adv_adc.v ;         ;
-; ../autito/Bloque_ADC_controller/adc_adc_mega_0.v           ; yes             ; User Verilog HDL File              ; F:/Users/Administrador/Documents/GitHub/autito/Bloque_ADC_controller/adc_adc_mega_0.v           ;         ;
-; ../partekeko/Antirreboteesquema.bdf                        ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/partekeko/Antirreboteesquema.bdf                        ;         ;
-; ../tomadecision2/decisionfinal.bdf                         ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/tomadecision2/decisionfinal.bdf                         ;         ;
-; ../vecinos/controlgeneralversion3_4.vhd                    ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/vecinos/controlgeneralversion3_4.vhd                    ;         ;
-; ../tomadecision2/decision.vhd                              ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/tomadecision2/decision.vhd                              ;         ;
-; ../control/control2.vhd                                    ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/control/control2.vhd                                    ;         ;
-; ../autito/doblar2.vhd                                      ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/autito/doblar2.vhd                                      ;         ;
-; ../autito/comparador_1.vhd                                 ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/autito/comparador_1.vhd                                 ;         ;
-; ../autito/output_files/comparador_2.vhd                    ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/autito/output_files/comparador_2.vhd                    ;         ;
-; ../autito/pll.vhd                                          ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/autito/pll.vhd                                          ;         ;
-; ../derecho/avanzar.vhd                                     ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/derecho/avanzar.vhd                                     ;         ;
-; ../derecho/pll1.vhd                                        ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/derecho/pll1.vhd                                        ;         ;
-; ../derecho/esqumaticoADC.bdf                               ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/derecho/esqumaticoADC.bdf                               ;         ;
-; ../derecho/comparador_adc.vhd                              ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/derecho/comparador_adc.vhd                              ;         ;
-; ../derecho/adc.vhd                                         ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/derecho/adc.vhd                                         ;         ;
-; ../partekeko/comparador.vhd                                ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/partekeko/comparador.vhd                                ;         ;
-; ../partekeko/Antirrebote.vhd                               ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/partekeko/Antirrebote.vhd                               ;         ;
-; ../partekeko/output_files/pll10k.vhd                       ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/partekeko/output_files/pll10k.vhd                       ;         ;
-; ../control/actualizacion_paredes.bdf                       ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/control/actualizacion_paredes.bdf                       ;         ;
-; fin.bdf                                                    ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/fin/fin.bdf                                             ;         ;
-; altpll.tdf                                                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                    ;         ;
-; aglobal130.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                ;         ;
-; stratix_pll.inc                                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                               ;         ;
-; stratixii_pll.inc                                          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                             ;         ;
-; cycloneii_pll.inc                                          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                             ;         ;
-; db/pll1_altpll.v                                           ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/fin/db/pll1_altpll.v                                    ;         ;
-; lpm_compare.tdf                                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.tdf                               ;         ;
-; comptree.inc                                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/comptree.inc                                  ;         ;
-; altshift.inc                                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                  ;         ;
-; db/cmpr_1hj.tdf                                            ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/fin/db/cmpr_1hj.tdf                                     ;         ;
-; lpm_counter.tdf                                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf                               ;         ;
-; lpm_constant.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc                              ;         ;
-; lpm_decode.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                ;         ;
-; lpm_add_sub.inc                                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                               ;         ;
-; cmpconst.inc                                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc                                  ;         ;
-; lpm_compare.inc                                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                               ;         ;
-; lpm_counter.inc                                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                               ;         ;
-; dffeea.inc                                                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc                                    ;         ;
-; alt_counter_stratix.inc                                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc                       ;         ;
-; db/cntr_mti.tdf                                            ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/fin/db/cntr_mti.tdf                                     ;         ;
-; db/pll10k_altpll.v                                         ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/fin/db/pll10k_altpll.v                                  ;         ;
-; db/cmpr_sgj.tdf                                            ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/fin/db/cmpr_sgj.tdf                                     ;         ;
-; db/pll_altpll.v                                            ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/fin/db/pll_altpll.v                                     ;         ;
-; db/cmpr_tgj.tdf                                            ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/fin/db/cmpr_tgj.tdf                                     ;         ;
-+------------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                    ;
++------------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                           ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                ; Library ;
++------------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; ../../comp/comp.vhd                                        ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/comp/comp.vhd                                                       ;         ;
+; ../orientacion2/ubicacionparte2v2.vhd                      ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/orientacion2/ubicacionparte2v2.vhd                      ;         ;
+; ../orientacion2/ubicacion.bdf                              ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/acaestatodo/orientacion2/ubicacion.bdf                              ;         ;
+; ../orientacion2/SumaoResta.vhd                             ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/orientacion2/SumaoResta.vhd                             ;         ;
+; ../orientacion2/orientacion.vhd                            ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/orientacion2/orientacion.vhd                            ;         ;
+; ../partekeko/lpm_counter0.vhd                              ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/acaestatodo/partekeko/lpm_counter0.vhd                              ;         ;
+; ../contadordecuadriculas2/contador_de_cuadriculas.vhd      ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/contadordecuadriculas2/contador_de_cuadriculas.vhd      ;         ;
+; ../contadordecuadriculas2/contadorcuadriculas.bdf          ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/acaestatodo/contadordecuadriculas2/contadorcuadriculas.bdf          ;         ;
+; ../autito/Bloque_ADC_controller/altera_up_avalon_adv_adc.v ; yes             ; User Verilog HDL File              ; F:/Users/Administrador/Documents/GitHub/acaestatodo/autito/Bloque_ADC_controller/altera_up_avalon_adv_adc.v ;         ;
+; ../autito/Bloque_ADC_controller/adc_adc_mega_0.v           ; yes             ; User Verilog HDL File              ; F:/Users/Administrador/Documents/GitHub/acaestatodo/autito/Bloque_ADC_controller/adc_adc_mega_0.v           ;         ;
+; ../partekeko/Antirreboteesquema.bdf                        ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/acaestatodo/partekeko/Antirreboteesquema.bdf                        ;         ;
+; ../tomadecision2/decisionfinal.bdf                         ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/acaestatodo/tomadecision2/decisionfinal.bdf                         ;         ;
+; ../vecinos/controlgeneralversion3_4.vhd                    ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/vecinos/controlgeneralversion3_4.vhd                    ;         ;
+; ../tomadecision2/decision.vhd                              ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/tomadecision2/decision.vhd                              ;         ;
+; ../control/control2.vhd                                    ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/control/control2.vhd                                    ;         ;
+; ../autito/doblar2.vhd                                      ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/autito/doblar2.vhd                                      ;         ;
+; ../autito/pll.vhd                                          ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/acaestatodo/autito/pll.vhd                                          ;         ;
+; ../derecho/avanzar.vhd                                     ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/derecho/avanzar.vhd                                     ;         ;
+; ../derecho/pll1.vhd                                        ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/acaestatodo/derecho/pll1.vhd                                        ;         ;
+; ../derecho/esqumaticoADC.bdf                               ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/acaestatodo/derecho/esqumaticoADC.bdf                               ;         ;
+; ../derecho/comparador_adc.vhd                              ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/acaestatodo/derecho/comparador_adc.vhd                              ;         ;
+; ../derecho/adc.vhd                                         ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/derecho/adc.vhd                                         ;         ;
+; ../partekeko/comparador.vhd                                ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/acaestatodo/partekeko/comparador.vhd                                ;         ;
+; ../partekeko/Antirrebote.vhd                               ; yes             ; User VHDL File                     ; F:/Users/Administrador/Documents/GitHub/acaestatodo/partekeko/Antirrebote.vhd                               ;         ;
+; ../partekeko/output_files/pll10k.vhd                       ; yes             ; User Wizard-Generated File         ; F:/Users/Administrador/Documents/GitHub/acaestatodo/partekeko/output_files/pll10k.vhd                       ;         ;
+; ../control/actualizacion_paredes.bdf                       ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/acaestatodo/control/actualizacion_paredes.bdf                       ;         ;
+; fin.bdf                                                    ; yes             ; User Block Diagram/Schematic File  ; F:/Users/Administrador/Documents/GitHub/acaestatodo/fin/fin.bdf                                             ;         ;
+; altpll.tdf                                                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                                ;         ;
+; aglobal130.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                            ;         ;
+; stratix_pll.inc                                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                           ;         ;
+; stratixii_pll.inc                                          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratixii_pll.inc                                         ;         ;
+; cycloneii_pll.inc                                          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cycloneii_pll.inc                                         ;         ;
+; db/pll1_altpll.v                                           ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/acaestatodo/fin/db/pll1_altpll.v                                    ;         ;
+; db/pll10k_altpll.v                                         ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/acaestatodo/fin/db/pll10k_altpll.v                                  ;         ;
+; lpm_compare.tdf                                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.tdf                                           ;         ;
+; comptree.inc                                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/comptree.inc                                              ;         ;
+; altshift.inc                                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                              ;         ;
+; db/cmpr_sgj.tdf                                            ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/acaestatodo/fin/db/cmpr_sgj.tdf                                     ;         ;
+; lpm_counter.tdf                                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf                                           ;         ;
+; lpm_constant.inc                                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc                                          ;         ;
+; lpm_decode.inc                                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                            ;         ;
+; lpm_add_sub.inc                                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                                           ;         ;
+; cmpconst.inc                                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc                                              ;         ;
+; lpm_compare.inc                                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                                           ;         ;
+; lpm_counter.inc                                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                                           ;         ;
+; dffeea.inc                                                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc                                                ;         ;
+; alt_counter_stratix.inc                                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                   ;         ;
+; db/cntr_mti.tdf                                            ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/acaestatodo/fin/db/cntr_mti.tdf                                     ;         ;
+; db/pll_altpll.v                                            ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/acaestatodo/fin/db/pll_altpll.v                                     ;         ;
+; db/cmpr_tgj.tdf                                            ; yes             ; Auto-Generated Megafunction        ; F:/Users/Administrador/Documents/GitHub/acaestatodo/fin/db/cmpr_tgj.tdf                                     ;         ;
++------------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
@@ -246,31 +242,31 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                          ;
 +---------------------------------------------+--------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 455                                                                            ;
+; Estimated Total logic elements              ; 535                                                                            ;
 ;                                             ;                                                                                ;
-; Total combinational functions               ; 412                                                                            ;
+; Total combinational functions               ; 489                                                                            ;
 ; Logic element usage by number of LUT inputs ;                                                                                ;
-;     -- 4 input functions                    ; 204                                                                            ;
-;     -- 3 input functions                    ; 64                                                                             ;
-;     -- <=2 input functions                  ; 144                                                                            ;
+;     -- 4 input functions                    ; 238                                                                            ;
+;     -- 3 input functions                    ; 91                                                                             ;
+;     -- <=2 input functions                  ; 160                                                                            ;
 ;                                             ;                                                                                ;
 ; Logic elements by mode                      ;                                                                                ;
-;     -- normal mode                          ; 386                                                                            ;
-;     -- arithmetic mode                      ; 26                                                                             ;
+;     -- normal mode                          ; 445                                                                            ;
+;     -- arithmetic mode                      ; 44                                                                             ;
 ;                                             ;                                                                                ;
-; Total registers                             ; 204                                                                            ;
-;     -- Dedicated logic registers            ; 204                                                                            ;
+; Total registers                             ; 246                                                                            ;
+;     -- Dedicated logic registers            ; 246                                                                            ;
 ;     -- I/O registers                        ; 0                                                                              ;
 ;                                             ;                                                                                ;
-; I/O pins                                    ; 36                                                                             ;
+; I/O pins                                    ; 27                                                                             ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                              ;
 ; Total PLLs                                  ; 4                                                                              ;
 ;     -- PLLs                                 ; 4                                                                              ;
 ;                                             ;                                                                                ;
 ; Maximum fan-out node                        ; pll1:inst5|altpll:altpll_component|pll1_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 98                                                                             ;
-; Total fan-out                               ; 1974                                                                           ;
-; Average fan-out                             ; 2.85                                                                           ;
+; Maximum fan-out                             ; 119                                                                            ;
+; Total fan-out                               ; 2342                                                                           ;
+; Average fan-out                             ; 2.95                                                                           ;
 +---------------------------------------------+--------------------------------------------------------------------------------+
 
 
@@ -279,7 +275,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
-; |fin                                            ; 412 (3)           ; 204 (0)      ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |fin                                                                                                        ; work         ;
+; |fin                                            ; 489 (3)           ; 246 (0)      ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |fin                                                                                                        ; work         ;
 ;    |Antirreboteesquema:inst26|                  ; 30 (0)            ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|Antirreboteesquema:inst26                                                                              ; work         ;
 ;       |Antirrebote:inst|                        ; 10 (10)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|Antirreboteesquema:inst26|Antirrebote:inst                                                             ; work         ;
 ;       |comparador:inst2|                        ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|Antirreboteesquema:inst26|comparador:inst2                                                             ; work         ;
@@ -294,11 +290,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |pll:inst3|                               ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|Antirreboteesquema:inst26|pll:inst3                                                                    ; work         ;
 ;          |altpll:altpll_component|              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|Antirreboteesquema:inst26|pll:inst3|altpll:altpll_component                                            ; work         ;
 ;             |pll_altpll:auto_generated|         ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|Antirreboteesquema:inst26|pll:inst3|altpll:altpll_component|pll_altpll:auto_generated                  ; work         ;
+;    |actualizacion_paredes:inst4|                ; 7 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|actualizacion_paredes:inst4                                                                            ; work         ;
+;       |control2:inst1|                          ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|actualizacion_paredes:inst4|control2:inst1                                                             ; work         ;
 ;    |avanzar:inst10|                             ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|avanzar:inst10                                                                                         ; work         ;
-;    |controlgeneralversion3_4:inst2|             ; 210 (210)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|controlgeneralversion3_4:inst2                                                                         ; work         ;
-;    |decisionfinal:inst11|                       ; 29 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|decisionfinal:inst11                                                                                   ; work         ;
-;       |decision:inst|                           ; 29 (29)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|decisionfinal:inst11|decision:inst                                                                     ; work         ;
-;    |doblar2:inst6|                              ; 3 (3)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|doblar2:inst6                                                                                          ; work         ;
+;    |comp:inst6|                                 ; 32 (32)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|comp:inst6                                                                                             ; work         ;
+;    |controlgeneralversion3_4:inst2|             ; 215 (215)         ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|controlgeneralversion3_4:inst2                                                                         ; work         ;
+;    |decisionfinal:inst17|                       ; 29 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|decisionfinal:inst17                                                                                   ; work         ;
+;       |decision:inst|                           ; 29 (29)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|decisionfinal:inst17|decision:inst                                                                     ; work         ;
+;    |doblar2:inst15|                             ; 12 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|doblar2:inst15                                                                                         ; work         ;
 ;    |esqumaticoADC:inst23|                       ; 86 (0)            ; 90 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|esqumaticoADC:inst23                                                                                   ; work         ;
 ;       |adc:inst|                                ; 78 (0)            ; 90 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|esqumaticoADC:inst23|adc:inst                                                                          ; work         ;
 ;          |adc_adc_mega_0:adc_mega_0|            ; 78 (26)           ; 90 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0                                                ; work         ;
@@ -315,31 +314,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |pll1:inst5|                                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|pll1:inst5                                                                                             ; work         ;
 ;       |altpll:altpll_component|                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|pll1:inst5|altpll:altpll_component                                                                     ; work         ;
 ;          |pll1_altpll:auto_generated|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|pll1:inst5|altpll:altpll_component|pll1_altpll:auto_generated                                          ; work         ;
-;    |ubicacion:inst21|                           ; 47 (0)            ; 23 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|ubicacion:inst21                                                                                       ; work         ;
+;    |ubicacion:inst21|                           ; 71 (0)            ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|ubicacion:inst21                                                                                       ; work         ;
 ;       |SumaoResta:inst|                         ; 7 (7)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|ubicacion:inst21|SumaoResta:inst                                                                       ; work         ;
-;       |orientacion:inst1|                       ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|ubicacion:inst21|orientacion:inst1                                                                     ; work         ;
-;       |ubicacionparte2v2:inst2|                 ; 36 (36)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|ubicacion:inst21|ubicacionparte2v2:inst2                                                               ; work         ;
+;       |orientacion:inst1|                       ; 30 (30)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|ubicacion:inst21|orientacion:inst1                                                                     ; work         ;
+;       |ubicacionparte2v2:inst2|                 ; 34 (34)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fin|ubicacion:inst21|ubicacionparte2v2:inst2                                                               ; work         ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                            ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------------------+------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                   ; IP Include File                                                              ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------------------+------------------------------------------------------------------------------+
-; Altera ; LPM_COMPARE  ; 13.0    ; N/A          ; N/A          ; |fin|comparador_2:inst                            ; F:/Users/Administrador/Documents/GitHub/autito/output_files/comparador_2.vhd ;
-; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |fin|pll1:inst5                                   ; F:/Users/Administrador/Documents/GitHub/derecho/pll1.vhd                     ;
-; Altera ; LPM_COUNTER  ; N/A     ; N/A          ; N/A          ; |fin|lpm_counter0:inst9                           ; F:/Users/Administrador/Documents/GitHub/partekeko/lpm_counter0.vhd           ;
-; Altera ; LPM_COMPARE  ; N/A     ; N/A          ; N/A          ; |fin|comparador_1:inst18                          ; F:/Users/Administrador/Documents/GitHub/autito/comparador_1.vhd              ;
-; Altera ; LPM_COMPARE  ; N/A     ; N/A          ; N/A          ; |fin|esqumaticoADC:inst23|comparador_adc:inst1    ; F:/Users/Administrador/Documents/GitHub/derecho/comparador_adc.vhd           ;
-; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |fin|esqumaticoADC:inst23|pll1:inst2              ; F:/Users/Administrador/Documents/GitHub/derecho/pll1.vhd                     ;
-; Altera ; LPM_COMPARE  ; N/A     ; N/A          ; N/A          ; |fin|esqumaticoADC:inst23|comparador_adc:inst4    ; F:/Users/Administrador/Documents/GitHub/derecho/comparador_adc.vhd           ;
-; Altera ; LPM_COUNTER  ; N/A     ; N/A          ; N/A          ; |fin|Antirreboteesquema:inst26|lpm_counter0:inst1 ; F:/Users/Administrador/Documents/GitHub/partekeko/lpm_counter0.vhd           ;
-; Altera ; LPM_COMPARE  ; N/A     ; N/A          ; N/A          ; |fin|Antirreboteesquema:inst26|comparador:inst2   ; F:/Users/Administrador/Documents/GitHub/partekeko/comparador.vhd             ;
-; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |fin|Antirreboteesquema:inst26|pll:inst3          ; F:/Users/Administrador/Documents/GitHub/autito/pll.vhd                       ;
-; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |fin|Antirreboteesquema:inst26|pll10k:inst6       ; F:/Users/Administrador/Documents/GitHub/partekeko/output_files/pll10k.vhd    ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------------------+------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                     ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------+---------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                   ; IP Include File                                                                       ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------+---------------------------------------------------------------------------------------+
+; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |fin|pll1:inst5                                   ; F:/Users/Administrador/Documents/GitHub/acaestatodo/derecho/pll1.vhd                  ;
+; Altera ; LPM_COMPARE  ; N/A     ; N/A          ; N/A          ; |fin|esqumaticoADC:inst23|comparador_adc:inst1    ; F:/Users/Administrador/Documents/GitHub/acaestatodo/derecho/comparador_adc.vhd        ;
+; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |fin|esqumaticoADC:inst23|pll1:inst2              ; F:/Users/Administrador/Documents/GitHub/acaestatodo/derecho/pll1.vhd                  ;
+; Altera ; LPM_COMPARE  ; N/A     ; N/A          ; N/A          ; |fin|esqumaticoADC:inst23|comparador_adc:inst4    ; F:/Users/Administrador/Documents/GitHub/acaestatodo/derecho/comparador_adc.vhd        ;
+; Altera ; LPM_COUNTER  ; N/A     ; N/A          ; N/A          ; |fin|Antirreboteesquema:inst26|lpm_counter0:inst1 ; F:/Users/Administrador/Documents/GitHub/acaestatodo/partekeko/lpm_counter0.vhd        ;
+; Altera ; LPM_COMPARE  ; N/A     ; N/A          ; N/A          ; |fin|Antirreboteesquema:inst26|comparador:inst2   ; F:/Users/Administrador/Documents/GitHub/acaestatodo/partekeko/comparador.vhd          ;
+; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |fin|Antirreboteesquema:inst26|pll:inst3          ; F:/Users/Administrador/Documents/GitHub/acaestatodo/autito/pll.vhd                    ;
+; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |fin|Antirreboteesquema:inst26|pll10k:inst6       ; F:/Users/Administrador/Documents/GitHub/acaestatodo/partekeko/output_files/pll10k.vhd ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------+---------------------------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -421,62 +417,67 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------+
-; State Machine - |fin|doblar2:inst6|state                             ;
-+---------------+---------------+-----------+-----------+--------------+
-; Name          ; state.reversa ; state.izq ; state.der ; state.parado ;
-+---------------+---------------+-----------+-----------+--------------+
-; state.parado  ; 0             ; 0         ; 0         ; 0            ;
-; state.der     ; 0             ; 0         ; 1         ; 1            ;
-; state.izq     ; 0             ; 1         ; 0         ; 1            ;
-; state.reversa ; 1             ; 0         ; 0         ; 1            ;
-+---------------+---------------+-----------+-----------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |fin|doblar2:inst15|state                                                                                                                   ;
++----------------+----------------+------------+------------+----------------+------------+------------+---------------+-----------+-----------+--------------+
+; Name           ; state.reversa3 ; state.izq3 ; state.der3 ; state.reversa2 ; state.izq2 ; state.der2 ; state.reversa ; state.izq ; state.der ; state.parado ;
++----------------+----------------+------------+------------+----------------+------------+------------+---------------+-----------+-----------+--------------+
+; state.parado   ; 0              ; 0          ; 0          ; 0              ; 0          ; 0          ; 0             ; 0         ; 0         ; 0            ;
+; state.der      ; 0              ; 0          ; 0          ; 0              ; 0          ; 0          ; 0             ; 0         ; 1         ; 1            ;
+; state.izq      ; 0              ; 0          ; 0          ; 0              ; 0          ; 0          ; 0             ; 1         ; 0         ; 1            ;
+; state.reversa  ; 0              ; 0          ; 0          ; 0              ; 0          ; 0          ; 1             ; 0         ; 0         ; 1            ;
+; state.der2     ; 0              ; 0          ; 0          ; 0              ; 0          ; 1          ; 0             ; 0         ; 0         ; 1            ;
+; state.izq2     ; 0              ; 0          ; 0          ; 0              ; 1          ; 0          ; 0             ; 0         ; 0         ; 1            ;
+; state.reversa2 ; 0              ; 0          ; 0          ; 1              ; 0          ; 0          ; 0             ; 0         ; 0         ; 1            ;
+; state.der3     ; 0              ; 0          ; 1          ; 0              ; 0          ; 0          ; 0             ; 0         ; 0         ; 1            ;
+; state.izq3     ; 0              ; 1          ; 0          ; 0              ; 0          ; 0          ; 0             ; 0         ; 0         ; 1            ;
+; state.reversa3 ; 1              ; 0          ; 0          ; 0              ; 0          ; 0          ; 0             ; 0         ; 0         ; 1            ;
++----------------+----------------+------------+------------+----------------+------------+------------+---------------+-----------+-----------+--------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                              ;
-+-------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-; Register name                                                                                         ; Reason for Removal                                      ;
-+-------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-; controlgeneralversion3_4:inst2|distancias_dato[15][7]                                                 ; Stuck at GND due to stuck port data_in                  ;
-; controlgeneralversion3_4:inst2|distancias_dato[15][6]                                                 ; Stuck at GND due to stuck port data_in                  ;
-; controlgeneralversion3_4:inst2|distancias_dato[15][5]                                                 ; Stuck at GND due to stuck port data_in                  ;
-; controlgeneralversion3_4:inst2|distancias_dato[15][4]                                                 ; Stuck at GND due to stuck port data_in                  ;
-; lpm_counter0:inst9|lpm_counter:LPM_COUNTER_component|cntr_mti:auto_generated|counter_reg_bit[0..15]   ; Stuck at GND due to stuck port clock_enable             ;
-; actualizacion_paredes:inst4|control2:inst1|GI_prev                                                    ; Lost fanout                                             ;
-; actualizacion_paredes:inst4|control2:inst1|GD_prev                                                    ; Lost fanout                                             ;
-; actualizacion_paredes:inst4|control2:inst1|state                                                      ; Stuck at GND due to stuck port data_in                  ;
-; actualizacion_paredes:inst4|control2:inst1|M3_reg                                                     ; Stuck at GND due to stuck port clock_enable             ;
-; actualizacion_paredes:inst4|control2:inst1|M2_reg                                                     ; Stuck at GND due to stuck port clock_enable             ;
-; actualizacion_paredes:inst4|control2:inst1|M1_reg                                                     ; Stuck at GND due to stuck port clock_enable             ;
-; actualizacion_paredes:inst4|control2:inst1|M0_reg                                                     ; Stuck at GND due to stuck port clock_enable             ;
-; esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState~2 ; Lost fanout                                             ;
-; esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState~3 ; Lost fanout                                             ;
-; doblar2:inst6|state.der                                                                               ; Lost fanout                                             ;
-; doblar2:inst6|state.reversa                                                                           ; Lost fanout                                             ;
-; ubicacion:inst21|orientacion:inst1|state.Od                                                           ; Merged with ubicacion:inst21|orientacion:inst1|state.Ed ;
-; ubicacion:inst21|orientacion:inst1|state.Sd                                                           ; Merged with ubicacion:inst21|orientacion:inst1|state.Ed ;
-; ubicacion:inst21|orientacion:inst1|state.Ed                                                           ; Stuck at GND due to stuck port data_in                  ;
-; ubicacion:inst21|orientacion:inst1|state.Ng                                                           ; Stuck at GND due to stuck port data_in                  ;
-; decisionfinal:inst11|decision:inst|ea                                                                 ; Merged with decisionfinal:inst11|decision:inst|eg       ;
-; ubicacion:inst21|orientacion:inst1|state.Sg                                                           ; Lost fanout                                             ;
-; Total Number of Removed Registers = 37                                                                ;                                                         ;
-+-------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; ubicacion:inst21|orientacion:inst1|g[1]            ; VCC                 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                            ;
-+--------------------------------------------------------------------------------------------------+--------------------------------+----------------------------------------------------+
-; Register name                                                                                    ; Reason for Removal             ; Registers Removed due to This Register             ;
-+--------------------------------------------------------------------------------------------------+--------------------------------+----------------------------------------------------+
-; lpm_counter0:inst9|lpm_counter:LPM_COUNTER_component|cntr_mti:auto_generated|counter_reg_bit[15] ; Stuck at GND                   ; actualizacion_paredes:inst4|control2:inst1|state,  ;
-;                                                                                                  ; due to stuck port clock_enable ; actualizacion_paredes:inst4|control2:inst1|M3_reg, ;
-;                                                                                                  ;                                ; actualizacion_paredes:inst4|control2:inst1|M2_reg, ;
-;                                                                                                  ;                                ; actualizacion_paredes:inst4|control2:inst1|M1_reg, ;
-;                                                                                                  ;                                ; actualizacion_paredes:inst4|control2:inst1|M0_reg  ;
-; ubicacion:inst21|orientacion:inst1|state.Ed                                                      ; Stuck at GND                   ; ubicacion:inst21|orientacion:inst1|state.Ng,       ;
-;                                                                                                  ; due to stuck port data_in      ; ubicacion:inst21|orientacion:inst1|state.Sg        ;
-+--------------------------------------------------------------------------------------------------+--------------------------------+----------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                        ;
++-------------------------------------------------------------------------------------------------------+---------------------------------------------------+
+; Register name                                                                                         ; Reason for Removal                                ;
++-------------------------------------------------------------------------------------------------------+---------------------------------------------------+
+; controlgeneralversion3_4:inst2|distancias_dato[15][7]                                                 ; Stuck at GND due to stuck port data_in            ;
+; controlgeneralversion3_4:inst2|distancias_dato[15][6]                                                 ; Stuck at GND due to stuck port data_in            ;
+; controlgeneralversion3_4:inst2|distancias_dato[15][5]                                                 ; Stuck at GND due to stuck port data_in            ;
+; controlgeneralversion3_4:inst2|distancias_dato[15][4]                                                 ; Stuck at GND due to stuck port data_in            ;
+; contadorcuadriculas:inst16|contador_de_cuadriculas:inst|sensor_ant                                    ; Stuck at VCC due to stuck port data_in            ;
+; contadorcuadriculas:inst16|contador_de_cuadriculas:inst|count[0..7]                                   ; Stuck at GND due to stuck port clock_enable       ;
+; contadorcuadriculas:inst16|contador_de_cuadriculas:inst|count1[1]                                     ; Stuck at GND due to stuck port clock_enable       ;
+; contadorcuadriculas:inst16|contador_de_cuadriculas:inst|count1[0]                                     ; Stuck at GND due to stuck port clock              ;
+; contadorcuadriculas:inst16|contador_de_cuadriculas:inst|a1                                            ; Stuck at GND due to stuck port clock              ;
+; contadorcuadriculas:inst16|contador_de_cuadriculas:inst|a0                                            ; Stuck at GND due to stuck port clock              ;
+; esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState~2 ; Lost fanout                                       ;
+; esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|currState~3 ; Lost fanout                                       ;
+; decisionfinal:inst17|decision:inst|ea                                                                 ; Merged with decisionfinal:inst17|decision:inst|eg ;
+; Total Number of Removed Registers = 20                                                                ;                                                   ;
++-------------------------------------------------------------------------------------------------------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                            ;
++------------------------------------------------------------------+--------------------------------+--------------------------------------------------------------------+
+; Register name                                                    ; Reason for Removal             ; Registers Removed due to This Register                             ;
++------------------------------------------------------------------+--------------------------------+--------------------------------------------------------------------+
+; contadorcuadriculas:inst16|contador_de_cuadriculas:inst|count[1] ; Stuck at GND                   ; contadorcuadriculas:inst16|contador_de_cuadriculas:inst|count1[1], ;
+;                                                                  ; due to stuck port clock_enable ; contadorcuadriculas:inst16|contador_de_cuadriculas:inst|a1         ;
+; contadorcuadriculas:inst16|contador_de_cuadriculas:inst|count[0] ; Stuck at GND                   ; contadorcuadriculas:inst16|contador_de_cuadriculas:inst|count1[0], ;
+;                                                                  ; due to stuck port clock_enable ; contadorcuadriculas:inst16|contador_de_cuadriculas:inst|a0         ;
++------------------------------------------------------------------+--------------------------------+--------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -484,12 +485,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 204   ;
+; Total registers                              ; 246   ;
 ; Number of registers using Synchronous Clear  ; 5     ;
 ; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 109   ;
+; Number of registers using Asynchronous Clear ; 149   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 91    ;
+; Number of registers using Clock Enable       ; 89    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -503,6 +504,8 @@ Encoding Type:  One-Hot
 ; esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[1] ; 2       ;
 ; esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[2] ; 2       ;
 ; esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|sclk       ; 6       ;
+; ubicacion:inst21|orientacion:inst1|o0_reg                                                            ; 9       ;
+; ubicacion:inst21|orientacion:inst1|o1_reg                                                            ; 9       ;
 ; controlgeneralversion3_4:inst2|distancias_dato[2][6]                                                 ; 2       ;
 ; controlgeneralversion3_4:inst2|distancias_dato[5][6]                                                 ; 2       ;
 ; controlgeneralversion3_4:inst2|distancias_dato[4][6]                                                 ; 2       ;
@@ -525,7 +528,7 @@ Encoding Type:  One-Hot
 ; controlgeneralversion3_4:inst2|distancias_dato[12][4]                                                ; 2       ;
 ; controlgeneralversion3_4:inst2|distancias_dato[14][4]                                                ; 2       ;
 ; controlgeneralversion3_4:inst2|distancias_dato[9][4]                                                 ; 2       ;
-; Total number of inverted registers = 26                                                              ;         ;
+; Total number of inverted registers = 28                                                              ;         ;
 +------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -534,23 +537,23 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|CH1[9]                                              ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|CH0[3]                                              ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|address[0]        ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[5]        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|sclk_counter[3]   ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[7]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|sclk_counter[1]   ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|addr_shift_reg[3] ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|addr_shift_reg[2] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[0]        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fin|controlgeneralversion3_4:inst2|vecino_arriba[3]                                                             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |fin|esqumaticoADC:inst23|adc:inst|adc_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[2]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fin|controlgeneralversion3_4:inst2|vecino_arriba[1]                                                             ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fin|controlgeneralversion3_4:inst2|vecino_abajo[1]                                                              ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |fin|ubicacion:inst21|SumaoResta:inst|Add0                                                                       ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |fin|doblar2:inst6|state                                                                                         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fin|controlgeneralversion3_4:inst2|Mux3                                                                         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fin|controlgeneralversion3_4:inst2|Mux9                                                                         ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |fin|controlgeneralversion3_4:inst2|Mux10                                                                        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |fin|doblar2:inst15|state                                                                                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fin|controlgeneralversion3_4:inst2|Mux1                                                                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |fin|controlgeneralversion3_4:inst2|Mux10                                                                        ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |fin|controlgeneralversion3_4:inst2|Mux9                                                                         ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |fin|controlgeneralversion3_4:inst2|vecino_der[1]                                                                ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |fin|controlgeneralversion3_4:inst2|vecino_izq[1]                                                                ;
-; 10:1               ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; No         ; |fin|ubicacion:inst21|ubicacionparte2v2:inst2|reg_fstate.RESTAR1                                                 ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; No         ; |fin|ubicacion:inst21|ubicacionparte2v2:inst2|reg_fstate.SUMAR1                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
 
 
@@ -925,81 +928,6 @@ Encoding Type:  One-Hot
 ; AUTO_CASCADE_CHAINS           ; ON                     ; AUTO_CASCADE           ;
 ; IGNORE_CASCADE_BUFFERS        ; OFF                    ; IGNORE_CASCADE         ;
 +-------------------------------+------------------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: comparador_1:inst18|lpm_compare:LPM_COMPARE_component ;
-+------------------------+--------------+------------------------------------------------------------+
-; Parameter Name         ; Value        ; Type                                                       ;
-+------------------------+--------------+------------------------------------------------------------+
-; lpm_width              ; 16           ; Signed Integer                                             ;
-; LPM_REPRESENTATION     ; UNSIGNED     ; Untyped                                                    ;
-; LPM_PIPELINE           ; 0            ; Untyped                                                    ;
-; CHAIN_SIZE             ; 8            ; Untyped                                                    ;
-; ONE_INPUT_IS_CONSTANT  ; YES          ; Untyped                                                    ;
-; CARRY_CHAIN            ; MANUAL       ; Untyped                                                    ;
-; CASCADE_CHAIN          ; MANUAL       ; Untyped                                                    ;
-; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                                         ;
-; CASCADE_CHAIN_LENGTH   ; 2            ; CASCADE_CHAIN_LENGTH                                       ;
-; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                    ;
-; CBXI_PARAMETER         ; cmpr_1hj     ; Untyped                                                    ;
-; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                               ;
-; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                             ;
-+------------------------+--------------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_counter0:inst9|lpm_counter:LPM_COUNTER_component ;
-+------------------------+--------------+-----------------------------------------------------------+
-; Parameter Name         ; Value        ; Type                                                      ;
-+------------------------+--------------+-----------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                ;
-; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                              ;
-; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                              ;
-; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                            ;
-; LPM_WIDTH              ; 16           ; Signed Integer                                            ;
-; LPM_DIRECTION          ; UP           ; Untyped                                                   ;
-; LPM_MODULUS            ; 0            ; Untyped                                                   ;
-; LPM_AVALUE             ; UNUSED       ; Untyped                                                   ;
-; LPM_SVALUE             ; UNUSED       ; Untyped                                                   ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED  ; Untyped                                                   ;
-; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                   ;
-; CARRY_CHAIN            ; MANUAL       ; Untyped                                                   ;
-; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                                        ;
-; NOT_GATE_PUSH_BACK     ; ON           ; NOT_GATE_PUSH_BACK                                        ;
-; CARRY_CNT_EN           ; SMART        ; Untyped                                                   ;
-; LABWIDE_SCLR           ; ON           ; Untyped                                                   ;
-; USE_NEW_VERSION        ; TRUE         ; Untyped                                                   ;
-; CBXI_PARAMETER         ; cntr_mti     ; Untyped                                                   ;
-+------------------------+--------------+-----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: comparador_2:inst|lpm_compare:LPM_COMPARE_component ;
-+------------------------+--------------+----------------------------------------------------------+
-; Parameter Name         ; Value        ; Type                                                     ;
-+------------------------+--------------+----------------------------------------------------------+
-; lpm_width              ; 16           ; Signed Integer                                           ;
-; LPM_REPRESENTATION     ; UNSIGNED     ; Untyped                                                  ;
-; LPM_PIPELINE           ; 0            ; Untyped                                                  ;
-; CHAIN_SIZE             ; 8            ; Untyped                                                  ;
-; ONE_INPUT_IS_CONSTANT  ; YES          ; Untyped                                                  ;
-; CARRY_CHAIN            ; MANUAL       ; Untyped                                                  ;
-; CASCADE_CHAIN          ; MANUAL       ; Untyped                                                  ;
-; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                                       ;
-; CASCADE_CHAIN_LENGTH   ; 2            ; CASCADE_CHAIN_LENGTH                                     ;
-; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                  ;
-; CBXI_PARAMETER         ; cmpr_1hj     ; Untyped                                                  ;
-; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                             ;
-; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                           ;
-+------------------------+--------------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2310,90 +2238,94 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 29 19:56:21 2024
+    Info: Processing started: Sat Nov 30 16:46:32 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fin -c fin
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/orientacion2/ubicacionparte2v2.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/comp/comp.vhd
+    Info (12022): Found design unit 1: comp-compa
+    Info (12023): Found entity 1: comp
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/orientacion2/ubicacionparte2v2.vhd
     Info (12022): Found design unit 1: ubicacionparte2v2-BEHAVIOR
     Info (12023): Found entity 1: ubicacionparte2v2
-Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/orientacion2/ubicacion.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/orientacion2/ubicacion.bdf
     Info (12023): Found entity 1: ubicacion
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/orientacion2/sumaoresta.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/orientacion2/sumaoresta.vhd
     Info (12022): Found design unit 1: SumaoResta-Behavioral
     Info (12023): Found entity 1: SumaoResta
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/orientacion2/orientacion.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/orientacion2/orientacion.vhd
     Info (12022): Found design unit 1: orientacion-rtl
     Info (12023): Found entity 1: orientacion
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/partekeko/lpm_counter0.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/partekeko/lpm_counter0.vhd
     Info (12022): Found design unit 1: lpm_counter0-SYN
     Info (12023): Found entity 1: lpm_counter0
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/contadordecuadriculas2/contador_de_cuadriculas.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/contadordecuadriculas2/contador_de_cuadriculas.vhd
     Info (12022): Found design unit 1: contador_de_cuadriculas-Behavioral
     Info (12023): Found entity 1: contador_de_cuadriculas
-Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/contadordecuadriculas2/contadorcuadriculas.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/contadordecuadriculas2/contadorcuadriculas.bdf
     Info (12023): Found entity 1: contadorcuadriculas
-Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/autito/bloque_adc_controller/altera_up_avalon_adv_adc.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/autito/bloque_adc_controller/altera_up_avalon_adv_adc.v
     Info (12023): Found entity 1: altera_up_avalon_adv_adc
-Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/autito/bloque_adc_controller/adc_adc_mega_0.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/autito/bloque_adc_controller/adc_adc_mega_0.v
     Info (12023): Found entity 1: adc_adc_mega_0
-Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/derecho/derecho.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/derecho/derecho.bdf
     Info (12023): Found entity 1: derecho
-Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/partekeko/antirreboteesquema.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/partekeko/antirreboteesquema.bdf
     Info (12023): Found entity 1: Antirreboteesquema
-Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/tomadecision2/decisionfinal.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/tomadecision2/decisionfinal.bdf
     Info (12023): Found entity 1: decisionfinal
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/vecinos/controlgeneralversion3_4.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/vecinos/controlgeneralversion3_4.vhd
     Info (12022): Found design unit 1: controlgeneralversion3_4-behavioral
     Info (12023): Found entity 1: controlgeneralversion3_4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/tomadecision2/decision.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/tomadecision2/decision.vhd
     Info (12022): Found design unit 1: decision-rtl
     Info (12023): Found entity 1: decision
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/control/control2.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/control/control2.vhd
     Info (12022): Found design unit 1: control2-rtl
     Info (12023): Found entity 1: control2
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/autito/doblar2.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/autito/doblar2.vhd
     Info (12022): Found design unit 1: doblar2-rtl
     Info (12023): Found entity 1: doblar2
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/autito/comparador_1.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/autito/comparador_1.vhd
     Info (12022): Found design unit 1: comparador_1-SYN
     Info (12023): Found entity 1: comparador_1
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/autito/output_files/comparador_2.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/autito/output_files/comparador_2.vhd
     Info (12022): Found design unit 1: comparador_2-SYN
     Info (12023): Found entity 1: comparador_2
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/autito/pll.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/autito/pll.vhd
     Info (12022): Found design unit 1: pll-SYN
     Info (12023): Found entity 1: pll
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/derecho/avanzar.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/derecho/avanzar.vhd
     Info (12022): Found design unit 1: avanzar-rtl
     Info (12023): Found entity 1: avanzar
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/derecho/pll1.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/derecho/pll1.vhd
     Info (12022): Found design unit 1: pll1-SYN
     Info (12023): Found entity 1: pll1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/derecho/esqumaticoadc.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/derecho/esqumaticoadc.bdf
     Info (12023): Found entity 1: esqumaticoADC
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/derecho/comparador_adc.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/derecho/comparador_adc.vhd
     Info (12022): Found design unit 1: comparador_adc-SYN
     Info (12023): Found entity 1: comparador_adc
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/derecho/adc.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/derecho/adc.vhd
     Info (12022): Found design unit 1: adc-rtl
     Info (12023): Found entity 1: adc
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/partekeko/comparador.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/partekeko/comparador.vhd
     Info (12022): Found design unit 1: comparador-SYN
     Info (12023): Found entity 1: comparador
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/partekeko/antirrebote.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/partekeko/antirrebote.vhd
     Info (12022): Found design unit 1: Antirrebote-behavioral
     Info (12023): Found entity 1: Antirrebote
-Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/partekeko/output_files/pll10k.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/partekeko/output_files/pll10k.vhd
     Info (12022): Found design unit 1: pll10k-SYN
     Info (12023): Found entity 1: pll10k
-Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/control/actualizacion_paredes.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/administrador/documents/github/acaestatodo/control/actualizacion_paredes.bdf
     Info (12023): Found entity 1: actualizacion_paredes
 Info (12021): Found 1 design units, including 1 entities, in source file fin.bdf
     Info (12023): Found entity 1: fin
 Warning (10645): VHDL type inferencing warning at controlgeneralversion3_4.vhd(75): two visible identifiers match "TO_INTEGER" because the actual at position 0 has an ambiguous type - it could be "UNSIGNED" or "SIGNED", assuming "UNSIGNED"
 Info (12127): Elaborating entity "fin" for the top level hierarchy
+Warning (275008): Primitive "GND" of instance "inst" not used
 Warning (275008): Primitive "GND" of instance "inst19" not used
-Info (12128): Elaborating entity "doblar2" for hierarchy "doblar2:inst6"
+Info (12128): Elaborating entity "doblar2" for hierarchy "doblar2:inst15"
 Info (12128): Elaborating entity "pll1" for hierarchy "pll1:inst5"
 Info (12128): Elaborating entity "altpll" for hierarchy "pll1:inst5|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "pll1:inst5|altpll:altpll_component"
@@ -2460,42 +2392,29 @@ Info (12133): Instantiated megafunction "pll1:inst5|altpll:altpll_component" wit
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll1_altpll.v
     Info (12023): Found entity 1: pll1_altpll
 Info (12128): Elaborating entity "pll1_altpll" for hierarchy "pll1:inst5|altpll:altpll_component|pll1_altpll:auto_generated"
-Info (12128): Elaborating entity "decisionfinal" for hierarchy "decisionfinal:inst11"
-Info (12128): Elaborating entity "decision" for hierarchy "decisionfinal:inst11|decision:inst"
+Info (12128): Elaborating entity "decisionfinal" for hierarchy "decisionfinal:inst17"
+Info (12128): Elaborating entity "decision" for hierarchy "decisionfinal:inst17|decision:inst"
+Warning (10492): VHDL Process Statement warning at decision.vhd(26): signal "aviso" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "ubicacion" for hierarchy "ubicacion:inst21"
 Info (12128): Elaborating entity "orientacion" for hierarchy "ubicacion:inst21|orientacion:inst1"
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(40): signal "gd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(40): signal "gi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(41): signal "gi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(41): signal "gd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(41): signal "tc2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(42): signal "gd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(42): signal "gi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(43): signal "gi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(43): signal "gd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at orientacion.vhd(43): signal "tc1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at orientacion.vhd(38): inferring latch(es) for signal or variable "g", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "g[0]" at orientacion.vhd(38)
+Info (10041): Inferred latch for "g[1]" at orientacion.vhd(38)
+Info (10041): Inferred latch for "g[2]" at orientacion.vhd(38)
+Info (10041): Inferred latch for "g[3]" at orientacion.vhd(38)
 Info (12128): Elaborating entity "SumaoResta" for hierarchy "ubicacion:inst21|SumaoResta:inst"
 Info (12128): Elaborating entity "ubicacionparte2v2" for hierarchy "ubicacion:inst21|ubicacionparte2v2:inst2"
-Info (12128): Elaborating entity "comparador_1" for hierarchy "comparador_1:inst18"
-Info (12128): Elaborating entity "lpm_compare" for hierarchy "comparador_1:inst18|lpm_compare:LPM_COMPARE_component"
-Info (12130): Elaborated megafunction instantiation "comparador_1:inst18|lpm_compare:LPM_COMPARE_component"
-Info (12133): Instantiated megafunction "comparador_1:inst18|lpm_compare:LPM_COMPARE_component" with the following parameter:
-    Info (12134): Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES"
-    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
-    Info (12134): Parameter "lpm_type" = "LPM_COMPARE"
-    Info (12134): Parameter "lpm_width" = "16"
-Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_1hj.tdf
-    Info (12023): Found entity 1: cmpr_1hj
-Info (12128): Elaborating entity "cmpr_1hj" for hierarchy "comparador_1:inst18|lpm_compare:LPM_COMPARE_component|cmpr_1hj:auto_generated"
-Info (12128): Elaborating entity "lpm_counter0" for hierarchy "lpm_counter0:inst9"
-Info (12128): Elaborating entity "lpm_counter" for hierarchy "lpm_counter0:inst9|lpm_counter:LPM_COUNTER_component"
-Info (12130): Elaborated megafunction instantiation "lpm_counter0:inst9|lpm_counter:LPM_COUNTER_component"
-Info (12133): Instantiated megafunction "lpm_counter0:inst9|lpm_counter:LPM_COUNTER_component" with the following parameter:
-    Info (12134): Parameter "lpm_direction" = "UP"
-    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
-    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
-    Info (12134): Parameter "lpm_width" = "16"
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_mti.tdf
-    Info (12023): Found entity 1: cntr_mti
-Info (12128): Elaborating entity "cntr_mti" for hierarchy "lpm_counter0:inst9|lpm_counter:LPM_COUNTER_component|cntr_mti:auto_generated"
-Info (12128): Elaborating entity "comparador_2" for hierarchy "comparador_2:inst"
-Info (12128): Elaborating entity "lpm_compare" for hierarchy "comparador_2:inst|lpm_compare:LPM_COMPARE_component"
-Info (12130): Elaborated megafunction instantiation "comparador_2:inst|lpm_compare:LPM_COMPARE_component"
-Info (12133): Instantiated megafunction "comparador_2:inst|lpm_compare:LPM_COMPARE_component" with the following parameter:
-    Info (12134): Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES"
-    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
-    Info (12134): Parameter "lpm_type" = "LPM_COMPARE"
-    Info (12134): Parameter "lpm_width" = "16"
+Info (12128): Elaborating entity "comp" for hierarchy "comp:inst6"
 Info (12128): Elaborating entity "Antirreboteesquema" for hierarchy "Antirreboteesquema:inst26"
 Info (12128): Elaborating entity "Antirrebote" for hierarchy "Antirreboteesquema:inst26|Antirrebote:inst"
 Info (12128): Elaborating entity "pll10k" for hierarchy "Antirreboteesquema:inst26|pll10k:inst6"
@@ -2570,6 +2489,17 @@ Info (12133): Instantiated megafunction "Antirreboteesquema:inst26|comparador:in
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_sgj.tdf
     Info (12023): Found entity 1: cmpr_sgj
 Info (12128): Elaborating entity "cmpr_sgj" for hierarchy "Antirreboteesquema:inst26|comparador:inst2|lpm_compare:LPM_COMPARE_component|cmpr_sgj:auto_generated"
+Info (12128): Elaborating entity "lpm_counter0" for hierarchy "Antirreboteesquema:inst26|lpm_counter0:inst1"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "Antirreboteesquema:inst26|lpm_counter0:inst1|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "Antirreboteesquema:inst26|lpm_counter0:inst1|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "Antirreboteesquema:inst26|lpm_counter0:inst1|lpm_counter:LPM_COUNTER_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "16"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_mti.tdf
+    Info (12023): Found entity 1: cntr_mti
+Info (12128): Elaborating entity "cntr_mti" for hierarchy "Antirreboteesquema:inst26|lpm_counter0:inst1|lpm_counter:LPM_COUNTER_component|cntr_mti:auto_generated"
 Info (12128): Elaborating entity "pll" for hierarchy "Antirreboteesquema:inst26|pll:inst3"
 Info (12128): Elaborating entity "altpll" for hierarchy "Antirreboteesquema:inst26|pll:inst3|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "Antirreboteesquema:inst26|pll:inst3|altpll:altpll_component"
@@ -2653,44 +2583,36 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
 Info (12128): Elaborating entity "cmpr_tgj" for hierarchy "esqumaticoADC:inst23|comparador_adc:inst1|lpm_compare:LPM_COMPARE_component|cmpr_tgj:auto_generated"
 Info (12128): Elaborating entity "contadorcuadriculas" for hierarchy "contadorcuadriculas:inst16"
 Info (12128): Elaborating entity "contador_de_cuadriculas" for hierarchy "contadorcuadriculas:inst16|contador_de_cuadriculas:inst"
+Warning (14026): LATCH primitive "ubicacion:inst21|orientacion:inst1|g[3]" is permanently enabled
+Warning (14026): LATCH primitive "ubicacion:inst21|orientacion:inst1|g[0]" is permanently enabled
+Warning (14026): LATCH primitive "ubicacion:inst21|orientacion:inst1|g[2]" is permanently enabled
+Warning (14026): LATCH primitive "ubicacion:inst21|orientacion:inst1|g[3]" is permanently enabled
+Warning (14026): LATCH primitive "ubicacion:inst21|orientacion:inst1|g[2]" is permanently enabled
+Warning (14026): LATCH primitive "ubicacion:inst21|orientacion:inst1|g[0]" is permanently enabled
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "aleb" is stuck at VCC
-    Warning (13410): Pin "q[15]" is stuck at GND
-    Warning (13410): Pin "q[14]" is stuck at GND
-    Warning (13410): Pin "q[13]" is stuck at GND
-    Warning (13410): Pin "q[12]" is stuck at GND
-    Warning (13410): Pin "q[11]" is stuck at GND
-    Warning (13410): Pin "q[10]" is stuck at GND
-    Warning (13410): Pin "q[9]" is stuck at GND
-    Warning (13410): Pin "q[8]" is stuck at GND
-    Warning (13410): Pin "q[7]" is stuck at GND
-    Warning (13410): Pin "q[6]" is stuck at GND
-    Warning (13410): Pin "q[5]" is stuck at GND
-    Warning (13410): Pin "q[4]" is stuck at GND
-    Warning (13410): Pin "q[3]" is stuck at GND
-    Warning (13410): Pin "q[2]" is stuck at GND
-    Warning (13410): Pin "q[1]" is stuck at GND
-    Warning (13410): Pin "q[0]" is stuck at GND
+    Warning (13410): Pin "a1" is stuck at GND
+    Warning (13410): Pin "a0" is stuck at GND
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register ubicacion:inst21|orientacion:inst1|o0_reg will power up to High
+    Critical Warning (18010): Register ubicacion:inst21|orientacion:inst1|o1_reg will power up to High
 Warning (332009): The launch and latch times for the relationship between source clock: inst26|inst3|altpll_component|auto_generated|pll1|clk[0] and destination clock: inst26|inst6|altpll_component|auto_generated|pll1|clk[0] are outside of the legal time range. The relationship difference is correct, however the launch time is set to 0.
 Info (286030): Timing-Driven Synthesis is running
 Warning (332009): The launch and latch times for the relationship between source clock: inst26|inst3|altpll_component|auto_generated|pll1|clk[0] and destination clock: inst26|inst6|altpll_component|auto_generated|pll1|clk[0] are outside of the legal time range. The relationship difference is correct, however the launch time is set to 0.
-Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 4 node(s), including 0 DDIO, 4 PLL, 0 transceiver and 0 LCELL
 Warning (15899): PLL "esqumaticoADC:inst23|pll1:inst2|altpll:altpll_component|pll1_altpll:auto_generated|pll1" has parameters clk1_multiply_by and clk1_divide_by specified but port CLK[1] is not connected
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "s"
-Info (21057): Implemented 497 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 566 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 31 output pins
-    Info (21061): Implemented 457 logic cells
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 535 logic cells
     Info (21065): Implemented 4 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4653 megabytes
-    Info: Processing ended: Fri Nov 29 19:56:30 2024
-    Info: Elapsed time: 00:00:09
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 32 warnings
+    Info: Peak virtual memory: 4644 megabytes
+    Info: Processing ended: Sat Nov 30 16:46:40 2024
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:07
 
 

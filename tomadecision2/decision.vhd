@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity decision is
 
-port ( reset : in std_logic;
+port ( reset, aviso : in std_logic;
        clk : in std_logic;
 		 V0,V3,V1,V2 :in unsigned (3 downto 0); 
 		 O1,O0 :in std_logic;
@@ -23,8 +23,8 @@ selec<= O1 & O0 & aux;
 	process (reset,clk,selec,V0,V1,V2,V3)
 		begin
   
-		if reset= '0' then
-			GI<='0'; GD<='0' ;ea<='1';eg<='0' ;
+		if reset= '0' or aviso= '1' then
+			GI<='0'; GD<='0' ;ea<='1';eg<='0' ;	
 		elsif (rising_edge(clk)) then
 			if ((V0< V1) and (V0< V2) and (V0< V3)) then
 				aux<="00";

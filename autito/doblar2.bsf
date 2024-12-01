@@ -114,6 +114,13 @@ applicable agreement for further details.
 		(text "clc" (rect 137 123 147 135)(font "Arial" ))
 		(line (pt 168 128)(pt 152 128)(line_width 1))
 	)
+	(port
+		(pt 168 144)
+		(output)
+		(text "aviso" (rect 0 0 21 12)(font "Arial" ))
+		(text "aviso" (rect 126 139 147 151)(font "Arial" ))
+		(line (pt 168 144)(pt 152 144)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 152 160)(line_width 1))
 	)
