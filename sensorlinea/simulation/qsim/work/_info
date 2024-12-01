@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\Users\Administrador\Documents\GitHub\acaestatodo\sensorlinea\simulation\qsim
+vsensorlinea
+Z1 !s100 g=_2Le<e6Vb;OhZ25lcT;0
+Z2 IV2OcM[GVd8Unj4a@K>b@c3
+Z3 V56GX]XC;_oJ0B`OE:7]:e3
+Z4 dF:\Users\Administrador\Documents\GitHub\acaestatodo\sensorlinea\simulation\qsim
+Z5 w1733090940
+Z6 8sensorlinea.vo
+Z7 Fsensorlinea.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|sensorlinea.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1733090942.229000
+Z12 !s107 sensorlinea.vo|
+!s101 -O0
+vsensorlinea_vlg_check_tst
+!i10b 1
+Z13 !s100 1Gz9@MzcUmQj_EWk:4Vd?2
+Z14 I?];Z9R<DT]LAZWK@O]@=z2
+Z15 Vf]=?nb9kh4=LaXnh8>?o42
+R4
+Z16 w1733090938
+Z17 8sensorlinea.vt
+Z18 Fsensorlinea.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z19 !s108 1733090942.455000
+Z20 !s107 sensorlinea.vt|
+Z21 !s90 -work|work|sensorlinea.vt|
+!s101 -O0
+R10
+vsensorlinea_vlg_sample_tst
+!i10b 1
+Z22 !s100 0;kUgGC[8HjNd949I2>7i3
+Z23 IFL9eFiLiY1mGI?3W0oYS>3
+Z24 VC:KE@QIZINm77oHZlX`gd2
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vsensorlinea_vlg_vec_tst
+!i10b 1
+!s100 FGgoZ_e>fY:EzID7_9_RG1
+I[d_MME[9kHM8;DHiJ44OV0
+Z25 VdGNcHhB1B2WBbg8:5H6JP2
+R4
+R16
+R17
+R18
+Z26 L0 156
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

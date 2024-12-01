@@ -1,0 +1,10 @@
+|sensorlinea
+reset => fstate~3.DATAIN
+clock => fstate~1.DATAIN
+sensorlinea => Selector0.IN1
+sensorlinea => reg_fstate.negro1.DATAB
+sensorlinea => reg_fstate.blanco1.DATAB
+sensorlinea => Selector2.IN0
+sensorlimpio <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+
+

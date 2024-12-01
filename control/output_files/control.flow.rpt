@@ -1,5 +1,5 @@
 Flow report for control
-Thu Nov 28 11:48:56 2024
+Sun Dec 01 13:32:45 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 28 11:48:56 2024           ;
+; Flow Status                        ; Successful - Sun Dec 01 13:32:45 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; control                                         ;
-; Top-level Entity Name              ; actualizacion_paredes                           ;
+; Top-level Entity Name              ; control3                                        ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE22F17C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 8 / 22,320 ( < 1 % )                            ;
-;     Total combinational functions  ; 7 / 22,320 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 7 / 22,320 ( < 1 % )                            ;
-; Total registers                    ; 7                                               ;
-; Total pins                         ; 13 / 154 ( 8 % )                                ;
+; Total logic elements               ; 6 / 22,320 ( < 1 % )                            ;
+;     Total combinational functions  ; 6 / 22,320 ( < 1 % )                            ;
+;     Dedicated logic registers      ; 4 / 22,320 ( < 1 % )                            ;
+; Total registers                    ; 4                                               ;
+; Total pins                         ; 10 / 154 ( 6 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                                 ;
@@ -64,38 +64,38 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/28/2024 11:48:28 ;
+; Start date & time ; 12/01/2024 13:10:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; control             ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                               ;
-+-------------------------------------+---------------------------------+---------------+-----------------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name           ; Section Id     ;
-+-------------------------------------+---------------------------------+---------------+-----------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 141734670808418.173280530803020 ; --            ; --                    ; --             ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                              ; --            ; --                    ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --                    ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --                    ; --             ;
-; IP_TOOL_NAME                        ; LPM_COUNTER                     ; --            ; --                    ; --             ;
-; IP_TOOL_NAME                        ; LPM_COMPARE                     ; --            ; --                    ; --             ;
-; IP_TOOL_VERSION                     ; 13.0                            ; --            ; --                    ; --             ;
-; IP_TOOL_VERSION                     ; 13.0                            ; --            ; --                    ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --                    ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --                    ; --             ;
-; MISC_FILE                           ; lpm_counter0.bsf                ; --            ; --                    ; --             ;
-; MISC_FILE                           ; lpm_counter0.cmp                ; --            ; --                    ; --             ;
-; MISC_FILE                           ; lpm_compare0.bsf                ; --            ; --                    ; --             ;
-; MISC_FILE                           ; lpm_compare0.cmp                ; --            ; --                    ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                            ; --            ; --                    ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; actualizacion_paredes ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; actualizacion_paredes ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; actualizacion_paredes ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --                    ; --             ;
-; TOP_LEVEL_ENTITY                    ; actualizacion_paredes           ; control       ; --                    ; --             ;
-+-------------------------------------+---------------------------------+---------------+-----------------------+----------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 141734670808418.173306944206312 ; --            ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                              ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_COUNTER                     ; --            ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_COMPARE                     ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                            ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                            ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; lpm_counter0.bsf                ; --            ; --          ; --             ;
+; MISC_FILE                           ; lpm_counter0.cmp                ; --            ; --          ; --             ;
+; MISC_FILE                           ; lpm_compare0.bsf                ; --            ; --          ; --             ;
+; MISC_FILE                           ; lpm_compare0.cmp                ; --            ; --          ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                            ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; control3    ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; control3    ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; control3    ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; control3                        ; control       ; --          ; --             ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -103,12 +103,18 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4612 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:12     ; 1.0                     ; 4927 MB             ; 00:00:11                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4539 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4622 MB             ; 00:00:03                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4612 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:00:14     ; 1.0                     ; 4928 MB             ; 00:00:12                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4539 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4626 MB             ; 00:00:03                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4492 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:22     ; --                      ; --                  ; 00:00:21                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4500 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4500 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4500 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4500 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4500 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4500 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:33     ; --                      ; --                  ; 00:00:28                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -122,6 +128,12 @@ applicable agreement for further details.
 ; Assembler                 ; DESKTOP-1QB5JJJ  ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; DESKTOP-1QB5JJJ  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-1QB5JJJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-1QB5JJJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-1QB5JJJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-1QB5JJJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-1QB5JJJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-1QB5JJJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-1QB5JJJ  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -133,6 +145,12 @@ quartus_fit --read_settings_files=off --write_settings_files=off control -c cont
 quartus_asm --read_settings_files=off --write_settings_files=off control -c control
 quartus_sta control -c control
 quartus_eda --read_settings_files=off --write_settings_files=off control -c control
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog control -c control --vector_source=F:/Users/Administrador/Documents/GitHub/acaestatodo/control/Waveform4.vwf --testbench_file=./simulation/qsim/control.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog control -c control
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog control -c control --vector_source=F:/Users/Administrador/Documents/GitHub/acaestatodo/control/Waveform4.vwf --testbench_file=./simulation/qsim/control.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog control -c control
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog control -c control --vector_source=F:/Users/Administrador/Documents/GitHub/acaestatodo/control/Waveform4.vwf --testbench_file=./simulation/qsim/control.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog control -c control
 
 
 

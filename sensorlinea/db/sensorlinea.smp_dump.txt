@@ -1,0 +1,15 @@
+
+State Machine - |sensorlinea|fstate
+Name fstate.negro5 fstate.negro4 fstate.negro3 fstate.negro2 fstate.negro1 fstate.negro fstate.blanco5 fstate.blanco4 fstate.blanco3 fstate.blanco2 fstate.blanco1 fstate.blanco 
+fstate.blanco 0 0 0 0 0 0 0 0 0 0 0 0 
+fstate.blanco1 0 0 0 0 0 0 0 0 0 0 1 1 
+fstate.blanco2 0 0 0 0 0 0 0 0 0 1 0 1 
+fstate.blanco3 0 0 0 0 0 0 0 0 1 0 0 1 
+fstate.blanco4 0 0 0 0 0 0 0 1 0 0 0 1 
+fstate.blanco5 0 0 0 0 0 0 1 0 0 0 0 1 
+fstate.negro 0 0 0 0 0 1 0 0 0 0 0 1 
+fstate.negro1 0 0 0 0 1 0 0 0 0 0 0 1 
+fstate.negro2 0 0 0 1 0 0 0 0 0 0 0 1 
+fstate.negro3 0 0 1 0 0 0 0 0 0 0 0 1 
+fstate.negro4 0 1 0 0 0 0 0 0 0 0 0 1 
+fstate.negro5 1 0 0 0 0 0 0 0 0 0 0 1 

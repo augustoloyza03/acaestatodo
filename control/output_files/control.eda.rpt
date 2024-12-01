@@ -1,5 +1,5 @@
 EDA Netlist Writer report for control
-Thu Nov 28 11:48:56 2024
+Sun Dec 01 13:32:45 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Nov 28 11:48:56 2024 ;
+; EDA Netlist Writer Status ; Successful - Sun Dec 01 13:32:45 2024 ;
 ; Revision Name             ; control                               ;
-; Top-level Entity Name     ; actualizacion_paredes                 ;
+; Top-level Entity Name     ; control3                              ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -65,13 +65,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Simulation Generated Files                                                     ;
-+--------------------------------------------------------------------------------+
-; Generated Files                                                                ;
-+--------------------------------------------------------------------------------+
-; F:/Users/Administrador/Documents/GitHub/control/simulation/modelsim/control.vo ;
-+--------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                 ;
++--------------------------------------------------------------------------------------------+
+; Generated Files                                                                            ;
++--------------------------------------------------------------------------------------------+
+; F:/Users/Administrador/Documents/GitHub/acaestatodo/control/simulation/modelsim/control.vo ;
++--------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -80,12 +80,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Nov 28 11:48:55 2024
-Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off control -c control
-Info (204019): Generated file control.vo in folder "F:/Users/Administrador/Documents/GitHub/control/simulation/modelsim/" for EDA simulation tool
+    Info: Processing started: Sun Dec 01 13:32:44 2024
+Info: Command: quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog control -c control
+Info (204019): Generated file control.vo in folder "F:/Users/Administrador/Documents/GitHub/acaestatodo/control/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4504 megabytes
-    Info: Processing ended: Thu Nov 28 11:48:56 2024
+    Info: Peak virtual memory: 4500 megabytes
+    Info: Processing ended: Sun Dec 01 13:32:45 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

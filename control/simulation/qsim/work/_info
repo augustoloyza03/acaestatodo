@@ -36,13 +36,12 @@ r1
 31
 R9
 R10
-!i10b 1
-!s85 0
 Z17 !s108 1732735893.666000
 R12
+!i10b 1
+!s85 0
 !s101 -O0
 vcontrol2_vlg_check_tst
-!i10b 1
 Z18 !s100 aQmMjZ65Tgg?9^NTAoi2j1
 Z19 Ih3kDn@h@;f2fiK=gW8a`a0
 Z20 Vg1;=4K>>DGFI>fAOSohXb3
@@ -53,15 +52,15 @@ Z23 Fcontrol.vt
 L0 73
 R8
 r1
-!s85 0
 31
 Z24 !s108 1732735893.885000
 Z25 !s107 control.vt|
 Z26 !s90 -work|work|control.vt|
-!s101 -O0
 R10
-vcontrol2_vlg_sample_tst
 !i10b 1
+!s85 0
+!s101 -O0
+vcontrol2_vlg_sample_tst
 Z27 !s100 gGo6KPSmFn?Q_c8VTmizE1
 Z28 IfH1T:211eh06`RMD>1UDG1
 Z29 V<]zbGXGHngh6VgLoV<WXO2
@@ -72,86 +71,163 @@ R23
 L0 29
 R8
 r1
-!s85 0
 31
 R24
 R25
 R26
-!s101 -O0
 R10
-vcontrol2_vlg_vec_tst
 !i10b 1
-!s100 TDFAJUnfm4W8Ke08Mk=dG3
-I8@lAVzC^^PNJo_H4bmikf1
-Z30 VZ[Y1lh6akQ_?@bB7Tz0:E0
+!s85 0
+!s101 -O0
+vcontrol2_vlg_vec_tst
+Z30 I8@lAVzC^^PNJo_H4bmikf1
+Z31 VZ[Y1lh6akQ_?@bB7Tz0:E0
 R4
 R21
 R22
 R23
-Z31 L0 249
+Z32 L0 249
 R8
 r1
-!s85 0
 31
 R24
 R25
 R26
+R10
+Z33 !s100 TDFAJUnfm4W8Ke08Mk=dG3
+!i10b 1
+!s85 0
+!s101 -O0
+vcontrol3
+Z34 !s100 8GeMo4ndP`_1ZPoT0F=9a0
+Z35 IEA]5iBToW97:[0AZhfF2;0
+Z36 V[f2:oaSmYz6k>bkk@cHbN0
+Z37 dF:\Users\Administrador\Documents\GitHub\acaestatodo\control\simulation\qsim
+Z38 w1733070765
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+!i10b 1
+!s85 0
+Z39 !s108 1733070766.942000
+R12
+!s101 -O0
+vcontrol3_vlg_check_tst
+!i10b 1
+Z40 !s100 j9kP7D4e=7:3bVE=8<i242
+Z41 I]4He7bITd[^0XaQH`mOW<3
+Z42 VI9XRYeFzFBQ21JeR4W6>71
+R37
+Z43 w1733070764
+R22
+R23
+L0 67
+R8
+r1
+!s85 0
+31
+Z44 !s108 1733070767.108000
+Z45 !s107 control.vt|
+R26
+!s101 -O0
+R10
+vcontrol3_vlg_sample_tst
+!i10b 1
+Z46 !s100 4SoKV7==18:kIJXm2DQh`0
+Z47 IB[T9IW][QfM@M^nY8=LaJ2
+Z48 V<@m0HeFPba:7Dfi6E24L82
+R37
+R43
+R22
+R23
+L0 29
+R8
+r1
+!s85 0
+31
+R44
+R45
+R26
+!s101 -O0
+R10
+vcontrol3_vlg_vec_tst
+!i10b 1
+!s100 be<cGCb5TGz]mNgR:NSk[1
+I8fCVk=Dg^a7nM=fYUV25`3
+Z49 VB6hUnFeMk]1@E3c:gcHXB3
+R37
+R43
+R22
+R23
+Z50 L0 215
+R8
+r1
+!s85 0
+31
+R44
+R45
+R26
 !s101 -O0
 R10
 vcontrol_vlg_check_tst
-Z32 !s100 Q_2Y2ZXU<NLIM3ONAMjfF3
-Z33 IYc5Y8IQVKY;>l9<DbO]kD3
-Z34 VcHRhl1Pcc=HgZlCceOEEo3
+Z51 !s100 Q_2Y2ZXU<NLIM3ONAMjfF3
+Z52 IYc5Y8IQVKY;>l9<DbO]kD3
+Z53 VcHRhl1Pcc=HgZlCceOEEo3
 R4
-Z35 w1732414754
+Z54 w1732414754
 R22
 R23
 L0 71
 R8
 r1
 31
-Z36 !s108 1732414757.344000
-Z37 !s107 control.vt|
+Z55 !s108 1732414757.344000
+R25
 R26
 R10
 !i10b 1
 !s85 0
 !s101 -O0
 vcontrol_vlg_sample_tst
-Z38 !s100 j7ZLG@4MLEz`P`z61Z^^B1
-Z39 If`J4bB]TN:dimcFb2=cBE0
-Z40 VE[2gD7UGBU6OS`UzZb2C51
+Z56 !s100 j7ZLG@4MLEz`P`z61Z^^B1
+Z57 If`J4bB]TN:dimcFb2=cBE0
+Z58 VE[2gD7UGBU6OS`UzZb2C51
 R4
-R35
+R54
 R22
 R23
 L0 29
 R8
 r1
 31
-R36
-R37
+R55
+R25
 R26
 R10
 !i10b 1
 !s85 0
 !s101 -O0
 vcontrol_vlg_vec_tst
-Z41 IZ_H11=<MRT3n`<24jz>]A1
-Z42 V5NXK<oZgKCORaVm;a@7J`0
+Z59 IZ_H11=<MRT3n`<24jz>]A1
+Z60 V5NXK<oZgKCORaVm;a@7J`0
 R4
-R35
+R54
 R22
 R23
-Z43 L0 382
+Z61 L0 382
 R8
 r1
 31
-R36
-R37
+R55
+R25
 R26
 R10
-Z44 !s100 kb;2EX2Cb;TeWF4Pz?oLR3
+Z62 !s100 kb;2EX2Cb;TeWF4Pz?oLR3
 !i10b 1
 !s85 0
 !s101 -O0
