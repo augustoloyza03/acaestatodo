@@ -49,13 +49,13 @@ begin
 					   state <= avanzar;
 					end if;
 				when CI=>
-					if  D= '0' then
+					if  I= '0' then
 						state <= avanzar;
 					else
 						state <= CI;
 					end if;
 				when CD =>
-					if I= '0' then
+					if D= '0' then
 						state <= avanzar;
 					else
 						state <= CD;

@@ -871,11 +871,11 @@ locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 |derecho|avanzar:inst2
 clk => state~1.DATAIN
 I => process_0.IN0
-I => Selector1.IN3
+I => Selector2.IN3
 I => process_0.IN0
 I => Selector0.IN2
 D => process_0.IN1
-D => Selector2.IN3
+D => Selector1.IN3
 D => process_0.IN1
 D => Selector0.IN1
 reset => state~3.DATAIN
