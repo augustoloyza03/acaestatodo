@@ -1,0 +1,37 @@
+|comp
+clock => cuenta[0].CLK
+clock => cuenta[1].CLK
+clock => cuenta[2].CLK
+clock => cuenta[3].CLK
+clock => cuenta[4].CLK
+clock => cuenta[5].CLK
+clock => cuenta[6].CLK
+clock => cuenta[7].CLK
+clock => cuenta[8].CLK
+clock => cuenta[9].CLK
+clock => cuenta[10].CLK
+clock => cuenta[11].CLK
+clock => cuenta[12].CLK
+clock => cuenta[13].CLK
+clock => cuenta[14].CLK
+clock => cuenta[15].CLK
+reset => cuenta[0].ACLR
+reset => cuenta[1].ACLR
+reset => cuenta[2].ACLR
+reset => cuenta[3].ACLR
+reset => cuenta[4].ACLR
+reset => cuenta[5].ACLR
+reset => cuenta[6].ACLR
+reset => cuenta[7].ACLR
+reset => cuenta[8].ACLR
+reset => cuenta[9].ACLR
+reset => cuenta[10].ACLR
+reset => cuenta[11].ACLR
+reset => cuenta[12].ACLR
+reset => cuenta[13].ACLR
+reset => cuenta[14].ACLR
+reset => cuenta[15].ACLR
+salida1 <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+salida2 <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+

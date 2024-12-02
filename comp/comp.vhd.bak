@@ -1,0 +1,30 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY comp IS
+	PORT
+	(
+		clock, reset		: IN STD_LOGIC ;
+		salida1, salida2		: OUT STD_LOGIC;
+	);
+END comp;
+
+architecture compa of comp is
+	signal cuenta : std_logic_vector(15 downto 0);
+
+begin
+	if reset= '0' then
+		cuenta <= "0000000000000000";
+	elsif (rising_edge(clock)) then
+		cuenta <= to_stdlogicvector(unsigned(cuenta) + '1');
+		if cuenta < "0000010111011100" then 
+			salida1 <= '1';
+			else
+				salida1 <= '0';
+		if cuenta < "0000101110111000" then
+			salida2 <= '1';
+			else
+				salida2 <= '0';
+	end if;
+end compa;
+		
